@@ -1,33 +1,60 @@
 # Coding-Dojo
-Start your future-proof Software Engineering career
-
 Here's an opinionated view of what you'll need to get started. 
-    Open Source and Platform Independence take the lead.
-    Anything in this list can be used with: Windows, Mac OS and Linux. 
-    This repo has been developed under Windows using the tools listed below.
+1. Open Source and Platform Independence take the lead, since anything in this list can be used with:
+   - Windows
+   - macOS
+   - Linux 
+2. This repo has been developed under Windows using the tools listed below.
+3. The intention for later stages is to upgrade to newer LTS versions of Java SE as they become available and as the Coding Dojo advances.
+   - The same is true for any other parts such as Maven.
+   - Think of it as a living code base that matures.
 
+Now, let's start your future-proof Software Engineering career
 1. Java SE 17: Programming language for writing your programs.
-   1. https://www.oracle.com/nl/java/technologies/downloads/
-   2. The intention is to upgrade to newer LTS version of Java SE 21 and beyond as the dojo advances. 
-   3. Think of it as a living code base that matures.
+   1. Download  https://www.oracle.com/nl/java/technologies/downloads/
+      - Oracle has the following LTS versions of Java available: 8, 11, 17 and 21
+   2. Install Java to a specific folder, for example: C:\Program Files\Java\jdk-17.0.1
+   3. Set this folder as a system environment variable: JAVA_HOME
+   4. Add %JAVA_HOME%\bin to your PATH system variable
+   5. Make sure Java is set up properly: Use a terminal prompt or anything similar depending on your operating system. 
+      Windows has the PowerShell for example: 
+      java -version
+   6. After setting up Java, you can continue programming from an IDE of your choice.
+   7. Set up Java in IntelliJ: File --> Settings --> Build, Execution, Deployment --> Compiler --> Java Compiler
 
 2. Git: Version Control to keep track of your changes. https://git-scm.com/
-   After installing Git on your computer set up your name and e-mail (replace the placeholders with your own info)
+   -  After installing Git on your computer set up your name and e-mail (replace the placeholders with your own info)
    1. git config --global user.name “Your Name”
    2. git config --global user.email “your.name@your-email.com”
+   3. You can use Git from an IDE of your choice from now on, since most modern IDEs have a built-in terminal.
 
 3. Maven: Build what you developed
-   https://maven.apache.org/download.cgi
-   N.B. Version 3.8.4 has been used. At least Java SE 17 will be necessary as of Maven 4.
+   1. Download Maven from https://maven.apache.org/download.cgi
+   2. Extract the maven zip file to a directory of your choice such as 
+      - C:\Program Files\apache-maven-<version.number>
+   3. Set MAVEN_HOME to the directory to which you extracted the Maven zip folder 
+      such as C:\apache-maven-<version.number>
+      - Add %MAVEN_HOME%\bin to system environment variables
+      - Use one of the following commands to check whether Maven has been set properly. 
+      Use a terminal prompt or anything similar depending on your operating system. Windows has the PowerShell for example. 
+      Preferred:   mvn -v
+      Alternative: mvn -version
+   4. After setting up Maven, you can continue your repeatable builds from an IDE of your choice.
+   5. Set up Maven in IntelliJ: File --> Settings --> Build, Execution, Deployment --> Build Tools --> Maven
+      Use the Maven directory previously set up in the Maven home path: C:\apache-maven-<version.number>
+      Do not use the Bundled version, unless you have a good reason to do so.
+
+   - N.B.Maven version 3.8.4 has been used within IntelliJ under Windows 11. 
+   At least Java SE 17 (already used in this project) will be necessary as of Maven 4.
     
-4. IntelliJ: Bring it all together with Java and Kotlin's goto Integrated Development Environment (IDE)
-   https://www.jetbrains.com/idea/download/
+4. IntelliJ: Bring it all together with Java and Kotlin's goto IDE
+   -  https://www.jetbrains.com/idea/download/
    1. The Community Edition is completely free to use.
    2. The Ultimate Edition for Professional Software Development - free to try out for 30 days.
-   3. N.B. Feel free to use any IDE. Eclipse, Visual Studio Code, etc. to suit your personal preferences.
-
-
-
+   3. After installing either one of the versions, let's set up shop
+   -  N.B. Feel free to use any IDE to suit your personal preferences, such as:
+     -  Eclipse: https://eclipseide.org/
+     -  Visual Studio Code: https://code.visualstudio.com/
 
 
 
