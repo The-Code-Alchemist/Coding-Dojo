@@ -59,14 +59,15 @@ Now, let's start your future-proof Software Engineering career
       At least Java SE 17 (already used in this project) will be necessary as of Maven 4.
     
 4. IntelliJ: Bring it all together with Java and Kotlin's goto IDE
-   -  https://www.jetbrains.com/idea/download/
+   - Download and Install 
+   - https://www.jetbrains.com/help/idea/getting-started.html 
+   - https://www.jetbrains.com/idea/download/
    1. The Community Edition is completely free to use.
    2. The Ultimate Edition for Professional Software Development - free to try out for 30 days.
-   3. After installing either one of the versions, let's set up shop
-   4. Strongly recommended Plugins:
+   3. After installing either one of the versions, let's set up shop with some strongly recommended Plugins:
       - SonarQube https://plugins.jetbrains.com/plugin/7973-sonarqube-for-ide/
-      - Cucumber  https://plugins.jetbrains.com/plugin/7212-cucumber-for-java
-      - Gherkin   https://plugins.jetbrains.com/plugin/9164-gherkin 
+      - Cucumber  https://plugins.jetbrains.com/plugin/7212-cucumber-for-java/
+      - Gherkin   https://plugins.jetbrains.com/plugin/9164-gherkin/
    - N.B. Feel free to use any IDE to suit your personal preferences, such as:
      -  Eclipse: https://eclipseide.org/
      -  Visual Studio Code: https://code.visualstudio.com/
