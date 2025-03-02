@@ -30,6 +30,7 @@ Now, let's start your future-proof Software Engineering career
 
 3. Maven: Build what you developed
    1. Download Maven from https://maven.apache.org/download.cgi
+      - Feel free to try out any artifacts that are available https://mvnrepository.com/ 
    2. Extract the maven zip file to a directory of your choice such as 
       - C:\Program Files\apache-maven-<version.number>
    3. Set MAVEN_HOME to the directory to which you extracted the Maven zip folder 
@@ -43,25 +44,38 @@ Now, let's start your future-proof Software Engineering career
    5. Set up Maven in IntelliJ: File --> Settings --> Build, Execution, Deployment --> Build Tools --> Maven
       Use the Maven directory previously set up in the Maven home path: C:\apache-maven-<version.number>
       Do not use the Bundled version, unless you have a good reason to do so.
+   6. The following commands and their meaning:
+      - mvn clean    Deletes the target directory and its generated sources
+      - mvn compile  Compiles all source codes and recreates the deleted directories
+      - mvn package  Runs compile first, also runs any unit tests and package that based on the declared packaging tag
+      - mvn install  Similar to the package command, but copies it (e.g. the packaged jar, war or ear) to your local Maven repository. 
+        - This could be as follows under Windows   C:\Users\<UserName>\.m2\repository\    
+      - mvn deploy (beyond the scope of this session, but worth learning)
 
-   - N.B.Maven version 3.8.4 has been used within IntelliJ under Windows 11. 
-   At least Java SE 17 (already used in this project) will be necessary as of Maven 4.
+      - mvn clean install               Combines the clean and install Maven goals
+      - mvn clean install -DskipTests   Combines the clean and install Maven goals, except the tests are skipped.
+
+      - N.B.Maven version 3.8.4 has been used within IntelliJ under Windows 11. 
+      At least Java SE 17 (already used in this project) will be necessary as of Maven 4.
     
 4. IntelliJ: Bring it all together with Java and Kotlin's goto IDE
    -  https://www.jetbrains.com/idea/download/
    1. The Community Edition is completely free to use.
    2. The Ultimate Edition for Professional Software Development - free to try out for 30 days.
    3. After installing either one of the versions, let's set up shop
-   -  N.B. Feel free to use any IDE to suit your personal preferences, such as:
+   4. Strongly recommended Plugins:
+      - SonarQube https://plugins.jetbrains.com/plugin/7973-sonarqube-for-ide/
+      - Cucumber  https://plugins.jetbrains.com/plugin/7212-cucumber-for-java
+      - Gherkin   https://plugins.jetbrains.com/plugin/9164-gherkin 
+   - N.B. Feel free to use any IDE to suit your personal preferences, such as:
      -  Eclipse: https://eclipseide.org/
      -  Visual Studio Code: https://code.visualstudio.com/
 
 
+   
 
 
-
-
-Recommended courses & literature to keep going
+# Recommended courses & literature to keep going
 1. Pluralsight (requires a subscription)
     1. Extensive Library - Tailor to your specific needs from an extensive library.
        https://pluralsight.com/
