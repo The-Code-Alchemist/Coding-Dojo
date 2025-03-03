@@ -9,6 +9,9 @@
     </properties>
     <modelVersion>4.0.0</modelVersion>
 
+    <!--
+        Refer to the External Libraries for an overview of your Third Party Dependencies
+    -->
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>

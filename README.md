@@ -1,5 +1,5 @@
-# Coding-Dojo
-Here's an opinionated view of what you'll need to get started. 
+# Coding Dojo
+Here's an opinionated view of what you'll need to get started as a Software Enginee. 
 1. Open Source and Platform Independence take the lead, since anything in this list can be used with:
    - Windows
    - macOS
@@ -30,7 +30,9 @@ Now, let's start your future-proof Software Engineering career
 
 3. Maven: Build what you developed
    1. Download Maven from https://maven.apache.org/download.cgi
-      - Feel free to try out any artifacts that are available https://mvnrepository.com/ 
+      - Try out artifacts and archetypes
+      - https://mvnrepository.com/ 
+      - https://maven.apache.org/archetype/index.html
    2. Extract the maven zip file to a directory of your choice such as 
       - C:\Program Files\apache-maven-<version.number>
    3. Set MAVEN_HOME to the directory to which you extracted the Maven zip folder 
@@ -44,7 +46,7 @@ Now, let's start your future-proof Software Engineering career
    5. Set up Maven in IntelliJ: File --> Settings --> Build, Execution, Deployment --> Build Tools --> Maven
       Use the Maven directory previously set up in the Maven home path: C:\apache-maven-<version.number>
       Do not use the Bundled version, unless you have a good reason to do so.
-   6. The following commands and their meaning:
+   6. Frequently used Maven commands and their meaning:
       - mvn clean    Deletes the target directory and its generated sources
       - mvn compile  Compiles all source codes and recreates the deleted directories
       - mvn package  Runs compile first, also runs any unit tests and package that based on the declared packaging tag
@@ -55,8 +57,11 @@ Now, let's start your future-proof Software Engineering career
       - mvn clean install               Combines the clean and install Maven goals
       - mvn clean install -DskipTests   Combines the clean and install Maven goals, except the tests are skipped.
 
+      - mvn clean test                  Executes the unit tests
+
       - N.B.Maven version 3.8.4 has been used within IntelliJ under Windows 11. 
       At least Java SE 17 (already used in this project) will be necessary as of Maven 4.
+      - Maven support from IntelliJ     https://www.jetbrains.com/help/idea/maven-support.html
     
 4. IntelliJ: Bring it all together with Java and Kotlin's goto IDE
    - Download and Install 
@@ -68,11 +73,42 @@ Now, let's start your future-proof Software Engineering career
       - SonarQube https://plugins.jetbrains.com/plugin/7973-sonarqube-for-ide/
       - Cucumber  https://plugins.jetbrains.com/plugin/7212-cucumber-for-java/
       - Gherkin   https://plugins.jetbrains.com/plugin/9164-gherkin/
+      - There's a lot more out there! Check out the Plugins section in the Settings of IntelliJ 
    - N.B. Feel free to use any IDE to suit your personal preferences, such as:
      -  Eclipse: https://eclipseide.org/
      -  Visual Studio Code: https://code.visualstudio.com/
 
+# Future Additions to the Coding Dojo
+1. Java Frameworks to consider
+   1. Jakarta EE    https://jakarta.ee/
+   2. Springboot    https://spring.io/projects/spring-boot
+   3. Quarkus       https://quarkus.io/
+2. Test your work
+   1. JUnit         https://junit.org/
+   2. Cucumber      https://cucumber.io/
+      - https://cucumber.io/docs/installation/java
+   3. TestNG        https://testng.org/
+   4. Arquillian    https://arquillian.org/
+   5. Playwright    https://playwright.dev/
+3. Automation Server
+   1. Jenkins       https://www.jenkins.io/
+4. CI/CD
+   1. GitHub        https://github.com
+   2. GitLab        https://gitlab.com
+   3. Bitbucket     https://bitbucket.org/
+5. Containerize
+   1. Docker        https://www.docker.com/
+   2. Kubernetes    https://kubernetes.io/
+   3. OpenShift     https://www.redhat.com/en/technologies/cloud-computing/openshift
 
+6. Code Quality
+   1. SonarQube     https://www.sonarsource.com/products/sonarqube/
+   2. Sigrid        https://www.softwareimprovementgroup.com/sigrid-software-excellence-platform/
+7. Artificial Intelligence that may be able to help even further
+   1. AI Assistant definitely will (IntelliJ plugin)
+   2. ChatGPT       https://chatgpt.com/
+   3. Copilot       https://copilot.microsoft.com/
+   4. Deepseek      https://www.deepseek.com/
    
 
 
@@ -93,7 +129,10 @@ Now, let's start your future-proof Software Engineering career
    https://agilemanifesto.org/
 4. Download the Scrum Guide https://scrumguides.org/index.html
    https://scrum.org for more information
-5. Books worth considering for future reference. I expect them to stand the test of time.
+5. Agile FM Podcast - Radio for the Agile Community 
+   - Agile is applied beyond IT: Listen to ideas, success stories and pitfalls.
+   - https://www.agile.fm/agilefm
+6. Books worth considering for future reference. I expect them to stand the test of time.
    1. Head First Java, 3rd edition, ISBN 9781491910771
       Based on Java 8 - 17. Great for software maintenance purposes by revisiting older versions of Java. 
    2. Learn Java with Projects, ISBN 9781837637188
@@ -106,6 +145,9 @@ Now, let's start your future-proof Software Engineering career
       2. Building Maintainable Software - C# edition
       3. Building Software Teams, ISBN 9781491951774
    6. Robert "Uncle Bob" Martin
+      - Have a look at his websites
+      - http://cleancoder.com/
+      - http://butunclebob.com/
       1. Clean Code, ISBN 9780132350884
       2. The Clean Coder, ISBN 9780137081073
       3. We, Programmers, ISBN 9780135344262
