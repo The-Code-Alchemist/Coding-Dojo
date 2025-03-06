@@ -21,6 +21,8 @@ Now, let's start your future-proof Software Engineering career
       java -version
    6. After setting up Java, you can continue programming from an IDE of your choice.
    7. Set up Java in IntelliJ: File --> Settings --> Build, Execution, Deployment --> Compiler --> Java Compiler
+   - Check out Java on YouTube
+   - https://www.youtube.com/@java
 
 2. Git: Version Control to keep track of your changes. https://git-scm.com/
    -  After installing Git on your computer set up your name and e-mail (replace the placeholders with your own info)
@@ -34,9 +36,9 @@ Now, let's start your future-proof Software Engineering career
       - https://mvnrepository.com/ 
       - https://maven.apache.org/archetype/index.html
    2. Extract the maven zip file to a directory of your choice such as 
-      - C:\Program Files\apache-maven-<version.number>
+      - C:\dev\apache-maven-<version.number>
    3. Set MAVEN_HOME to the directory to which you extracted the Maven zip folder 
-      such as C:\apache-maven-<version.number>
+      such as C:\dev\apache-maven-<version.number>
       - Add %MAVEN_HOME%\bin to system environment variables
       - Use one of the following commands to check whether Maven has been set properly. 
       Use a terminal prompt or anything similar depending on your operating system. Windows has the PowerShell for example. 
@@ -44,7 +46,7 @@ Now, let's start your future-proof Software Engineering career
       Alternative: mvn -version
    4. After setting up Maven, you can continue your repeatable builds from an IDE of your choice.
    5. Set up Maven in IntelliJ: File --> Settings --> Build, Execution, Deployment --> Build Tools --> Maven
-      Use the Maven directory previously set up in the Maven home path: C:\apache-maven-<version.number>
+      Use the Maven directory previously set up in the Maven home path: C:\dev\apache-maven-<version.number>
       Do not use the Bundled version, unless you have a good reason to do so.
    6. Frequently used Maven commands and their meaning:
       - mvn clean    Deletes the target directory and its generated sources
@@ -59,7 +61,7 @@ Now, let's start your future-proof Software Engineering career
 
       - mvn clean test                  Executes the unit tests
 
-      - N.B.Maven version 3.8.4 has been used within IntelliJ under Windows 11. 
+      - N.B.Maven version 3.9.9 has been used within IntelliJ under Windows 11. 
       At least Java SE 17 (already used in this project) will be necessary as of Maven 4.
       - Maven support from IntelliJ     https://www.jetbrains.com/help/idea/maven-support.html
     
@@ -67,6 +69,7 @@ Now, let's start your future-proof Software Engineering career
    - Download and Install 
    - https://www.jetbrains.com/help/idea/getting-started.html 
    - https://www.jetbrains.com/idea/download/
+   - JetBrains YouTube Channel: https://www.youtube.com/@intellijidea
    1. The Community Edition is completely free to use.
    2. The Ultimate Edition for Professional Software Development - free to try out for 30 days.
    3. After installing either one of the versions, let's set up shop with some strongly recommended Plugins:
@@ -86,7 +89,7 @@ Now, let's start your future-proof Software Engineering career
 2. Test your work
    1. JUnit         https://junit.org/
    2. Cucumber      https://cucumber.io/
-      - https://cucumber.io/docs/installation/java
+   - How to install https://cucumber.io/docs/installation/java
    3. TestNG        https://testng.org/
    4. Arquillian    https://arquillian.org/
    5. Playwright    https://playwright.dev/
@@ -110,8 +113,6 @@ Now, let's start your future-proof Software Engineering career
    3. Copilot       https://copilot.microsoft.com/
    4. Deepseek      https://www.deepseek.com/
    
-
-
 # Recommended courses & literature to keep going
 1. Pluralsight (requires a subscription)
     1. Extensive Library - Tailor to your specific needs from an extensive library.
@@ -153,3 +154,13 @@ Now, let's start your future-proof Software Engineering career
       3. We, Programmers, ISBN 9780135344262
       4. Functional Design, ISBN 9780138176396 
       5. Clean Architecture, ISBN 9780134494166
+   7. For the Brogrammers who want to take a practical Jack of all trades approach to their full stack Software Engineering career
+      1. Bro Code              https://www.youtube.com/@BroCodez
+      2. AmigosCode            https://www.youtube.com/@amigoscode
+      3. Fireship              https://www.youtube.com/@Fireship
+      4. Programming with Mosh https://www.youtube.com/@programmingwithmosh
+      5. Coding with John      https://www.youtube.com/@CodingWithJohn
+      6. freeCodeCamp.org      https://www.youtube.com/@freecodecamp
+      7. SimpliLearn           https://www.youtube.com/@SimplilearnOfficial
+      8. JavaScript King       https://www.youtube.com/@JavaScriptKing
+      9. SuperSimpleDev        https://www.youtube.com/@SuperSimpleDev
