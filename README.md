@@ -29,12 +29,16 @@ Now, let's start your future-proof Software Engineering career
    1. git config --global user.name “Your Name”
    2. git config --global user.email “your.name@your-email.com”
    3. You can use Git from an IDE of your choice from now on, since most modern IDEs have a built-in terminal.
+   4. Git Tutorial for Beginners: Learn Git in 1 Hour https://www.youtube.com/watch?v=8JJ101D3knE&t=573s
+   5. Git cheat sheet from GitHub https://education.github.com/git-cheat-sheet-education.pdf
+   6. Merge Vs. Rebase https://www.youtube.com/shorts/nzv0sbfprJo
 
 3. Maven: Build what you developed
    1. Download Maven from https://maven.apache.org/download.cgi
-      - Try out artifacts and archetypes
+      - Try out artifacts, dependencies and archetypes
       - https://mvnrepository.com/ 
-      - https://maven.apache.org/archetype/index.html
+      - https://maven.apache.org/
+      - https://central.sonatype.com/
    2. Extract the maven zip file to a directory of your choice such as 
       - C:\dev\apache-maven-<version.number>
    3. Set MAVEN_HOME to the directory to which you extracted the Maven zip folder 
@@ -49,10 +53,11 @@ Now, let's start your future-proof Software Engineering career
       Use the Maven directory previously set up in the Maven home path: C:\dev\apache-maven-<version.number>
       Do not use the Bundled version, unless you have a good reason to do so.
    6. Frequently used Maven commands and their meaning:
-      - mvn clean    Deletes the target directory and its generated sources
-      - mvn compile  Compiles all source codes and recreates the deleted directories
-      - mvn package  Runs compile first, also runs any unit tests and package that based on the declared packaging tag
-      - mvn install  Similar to the package command, but copies it (e.g. the packaged jar, war or ear) to your local Maven repository. 
+      - mvn clean         Deletes the target directory and its generated sources
+      - mvn clean verify  
+      - mvn compile       Compiles all source codes and recreates the deleted directories
+      - mvn package       Runs compile first, also runs any unit tests and package that based on the declared packaging tag
+      - mvn install       Similar to the package command, but copies it (e.g. the packaged jar, war or ear) to your local Maven repository. 
         - This could be as follows under Windows   C:\Users\<UserName>\.m2\repository\    
       - mvn deploy (beyond the scope of this session, but worth learning)
 
@@ -155,12 +160,13 @@ Now, let's start your future-proof Software Engineering career
       4. Functional Design, ISBN 9780138176396 
       5. Clean Architecture, ISBN 9780134494166
    7. For the Brogrammers who want to take a practical Jack of all trades approach to their full stack Software Engineering career
-      1. Bro Code              https://www.youtube.com/@BroCodez
-      2. AmigosCode            https://www.youtube.com/@amigoscode
-      3. Fireship              https://www.youtube.com/@Fireship
-      4. Programming with Mosh https://www.youtube.com/@programmingwithmosh
-      5. Coding with John      https://www.youtube.com/@CodingWithJohn
-      6. freeCodeCamp.org      https://www.youtube.com/@freecodecamp
-      7. SimpliLearn           https://www.youtube.com/@SimplilearnOfficial
-      8. JavaScript King       https://www.youtube.com/@JavaScriptKing
-      9. SuperSimpleDev        https://www.youtube.com/@SuperSimpleDev
+      1.  Bro Code              https://www.youtube.com/@BroCodez
+      2.  AmigosCode            https://www.youtube.com/@amigoscode
+      3.  Fireship              https://www.youtube.com/@Fireship
+      4.  Programming with Mosh https://www.youtube.com/@programmingwithmosh
+      5.  Coding with John      https://www.youtube.com/@CodingWithJohn
+      6.  freeCodeCamp.org      https://www.youtube.com/@freecodecamp
+      7.  SimpliLearn           https://www.youtube.com/@SimplilearnOfficial
+      8.  JavaScript King       https://www.youtube.com/@JavaScriptKing
+      9.  SuperSimpleDev        https://www.youtube.com/@SuperSimpleDev
+      10. Coder Coder           https://www.youtube.com/@TheCoderCoder
