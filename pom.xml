@@ -9,10 +9,11 @@
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>backend-springboot</module>
-		<module>backend-jakarta</module>
-		<module>backend-quarkus</module>
-		<module>backend-micronaut</module>
+<!--		Uncomment module depending on their respective branch-->
+<!--		<module>backend-springboot</module>-->
+<!--		<module>backend-jakarta</module>-->
+<!--		<module>backend-quarkus</module>-->
+<!--		<module>backend-micronaut</module>-->
 	</modules>
 
 	<dependencyManagement>
