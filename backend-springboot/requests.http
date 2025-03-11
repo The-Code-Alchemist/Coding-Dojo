@@ -1,0 +1,12 @@
+GET http://localhost:8080/api/tutorials?source=YouTube
+
+### POST new tutorial
+POST http://localhost:8080/api/tutorials
+Content-Type: application/json
+
+{
+  "title": "New Java Course",
+  "description": "A great Java course for beginners",
+  "link": "https://udemy.com/java-course",
+  "platform": "Udemy"
+}
