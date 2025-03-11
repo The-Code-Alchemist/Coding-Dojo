@@ -170,3 +170,4 @@ Now, let's start your future-proof Software Engineering career
         8.  JavaScript King       https://www.youtube.com/@JavaScriptKing
         9.  SuperSimpleDev        https://www.youtube.com/@SuperSimpleDev
         10. Coder Coder           https://www.youtube.com/@TheCoderCoder
+        11. Your Average Tech Bro https://www.youtube.com/@YourAverageTechBro
