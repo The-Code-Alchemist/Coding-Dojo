@@ -6,7 +6,6 @@
   <packaging>pom</packaging>
   <modules>
     <module>backend-jakarta</module>
-    <module>coding-dojo-jakarta</module>
   </modules>
   <dependencyManagement>
     <dependencies>
