@@ -1,7 +1,7 @@
 package com.codingdojo.config;
 
 import com.codingdojo.model.Tutorial;
-import com.codingdojo.repository.TutorialRepository;
+import com.codingdojo.repositories.TutorialRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 

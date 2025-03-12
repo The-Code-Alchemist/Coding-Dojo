@@ -1,7 +1,7 @@
 package com.codingdojo.controllers;
 
 import com.codingdojo.model.Tutorial;
-import com.codingdojo.repository.TutorialRepository;
+import com.codingdojo.repositories.TutorialRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
