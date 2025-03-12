@@ -42,7 +42,7 @@ public class TutorialController {
         return ResponseEntity.ok(tutorials);
     }
 
-    @GetMapping
+    @GetMapping("/paginated")
     public ResponseEntity<Page<Tutorial>> getAllTutorials(
             @RequestParam(required = false) String source,
             @RequestParam(defaultValue = "0") int page,
