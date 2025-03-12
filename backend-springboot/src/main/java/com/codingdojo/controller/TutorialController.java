@@ -27,7 +27,7 @@ import java.util.Optional;
 public class TutorialController {
 
     @Autowired
-    private final TutorialRepository tutorialRepository;
+    private TutorialRepository tutorialRepository;
 
     public TutorialController(TutorialRepository tutorialRepository) {
         this.tutorialRepository = tutorialRepository;
