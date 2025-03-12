@@ -44,9 +44,11 @@ class TutorialControllerTest {
         mockMvc.perform(get("/api/tutorials")
                         .param("source", "YouTube"))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.length()").value(1)) // Expect 1 YouTube tutorial
+                .andExpect(jsonPath("$.length()").value(1))  // ✅ Expecting an array, not paginated content
                 .andExpect(jsonPath("$[0].title").value("Spring Boot Basics"));
     }
+
+
 
     @Test
     void testCreateTutorial() throws Exception {

@@ -29,13 +29,10 @@ public class TutorialController {
     @Autowired
     private TutorialRepository tutorialRepository;
 
-    public TutorialController(TutorialRepository tutorialRepository) {
-        this.tutorialRepository = tutorialRepository;
-    }
-
-    // ✅ GET all tutorials (with optional filtering by platform)
+    // GET all tutorials (with optional filtering by platform)
     @GetMapping
-    public ResponseEntity<List<Tutorial>> getAllTutorials(@RequestParam(required = false) String source) {
+    public ResponseEntity<List<Tutorial>> getAllTutorials(
+            @RequestParam(name = "source", required = false) String source) {
         List<Tutorial> tutorials = (source != null) ?
                 tutorialRepository.findByPlatform(source) :
                 tutorialRepository.findAll();
