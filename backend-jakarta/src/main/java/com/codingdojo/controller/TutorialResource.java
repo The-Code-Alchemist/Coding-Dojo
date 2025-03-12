@@ -11,7 +11,7 @@ import jakarta.ws.rs.core.Response;
 import java.util.List;
 import java.util.ArrayList;
 
-@Path("/api/tutorials") // Defines the base URL: /api/tutorials
+@Path("/tutorials") // Defines the base URL: /api/tutorials
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class TutorialResource {

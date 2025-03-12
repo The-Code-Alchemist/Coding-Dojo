@@ -7,8 +7,6 @@ public class Tutorial {
     private String link;
     private String platform;
 
-    public Tutorial() {}
-
     public Tutorial(Long id, String title, String description, String link, String platform) {
         this.id = id;
         this.title = title;
