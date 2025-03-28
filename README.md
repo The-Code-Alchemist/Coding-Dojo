@@ -1,13 +1,14 @@
 # Coding Dojo
-Here's an opinionated view of what you'll need to get started as a Software Enginee.
+Here's an opinionated view of what you'll need to get started as a Software Engineer.
 1. Open Source and Platform Independence take the lead, since anything in this list can be used with:
     - Windows
     - macOS
     - Linux
 2. This repo has been developed under Windows using the tools listed below.
+    - Clone the Coding Dojo GitHub repository and see for yourself! https://github.com/The-Code-Alchemist/Coding-Dojo/ 
 3. The intention for later stages is to upgrade to newer LTS versions of Java SE as they become available and as the Coding Dojo advances.
-    - The same is true for any other parts such as Maven.
-    - Think of it as a living code base that matures.
+    - The same is true for any other parts such as Maven, IntelliJ IDEA, etc.
+    - Think of it as a living code base that matures and grows.
 
 Now, let's start your future-proof Software Engineering career
 1. Java SE 17: Programming language for writing your programs.
@@ -18,11 +19,14 @@ Now, let's start your future-proof Software Engineering career
     4. Add %JAVA_HOME%\bin to your PATH system variable
     5. Make sure Java is set up properly: Use a terminal prompt or anything similar depending on your operating system.
        Windows has the PowerShell for example:
-       java -version
+       - java -version
+       - javac -version
     6. After setting up Java, you can continue programming from an IDE of your choice.
     7. Set up Java in IntelliJ: File --> Settings --> Build, Execution, Deployment --> Compiler --> Java Compiler
-    - Check out Java on YouTube
-    - https://www.youtube.com/@java
+    8. The Java API documentation can serve as a reference (multiple versions) https://www.oracle.com/java/technologies/java-se-api-doc.html
+    9. Oracle Java SE Support Roadmap https://www.oracle.com/java/technologies/java-se-support-roadmap.html
+   10. Java Language and Virtual Machine Specifications https://docs.oracle.com/javase/specs/
+   11. Check out Java on YouTube where new releases and celebrations are shown live https://www.youtube.com/@java
 
 2. Git: Version Control to keep track of your changes. https://git-scm.com/
     -  After installing Git on your computer set up your name and e-mail (replace the placeholders with your own info)
@@ -30,8 +34,11 @@ Now, let's start your future-proof Software Engineering career
     2. git config --global user.email “your.name@your-email.com”
     3. You can use Git from an IDE of your choice from now on, since most modern IDEs have a built-in terminal.
     4. Git Tutorial for Beginners: Learn Git in 1 Hour https://www.youtube.com/watch?v=8JJ101D3knE&t=573s
-    5. Git cheat sheet from GitHub https://education.github.com/git-cheat-sheet-education.pdf
-    6. Merge Vs. Rebase https://www.youtube.com/shorts/nzv0sbfprJo
+    5. Git cheat sheet from GitHub    https://education.github.com/git-cheat-sheet-education.pdf
+    6. Git cheat sheet from GitLab    http://about.gitlab.com/images/press/git-cheat-sheet.pdf
+    7. Git cheat sheet from Atlassian https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet
+    8. Free Code Camp's Git cheat sheet https://www.freecodecamp.org/news/git-cheat-sheet/
+    9. Merge Vs. Rebase https://www.youtube.com/shorts/nzv0sbfprJo
 
 3. Maven: Build what you developed
     1. Download Maven from https://maven.apache.org/download.cgi
@@ -43,7 +50,7 @@ Now, let's start your future-proof Software Engineering career
         - C:\dev\apache-maven-<version.number>
     3. Set MAVEN_HOME to the directory to which you extracted the Maven zip folder
        such as C:\dev\apache-maven-<version.number>
-        - Add %MAVEN_HOME%\bin to system environment variables
+        - Add %MAVEN_HOME%\bin to your PATH system variable
         - Use one of the following commands to check whether Maven has been set properly.
           Use a terminal prompt or anything similar depending on your operating system. Windows has the PowerShell for example.
           Preferred:   mvn -v
@@ -132,12 +139,19 @@ Now, let's start your future-proof Software Engineering career
        by Tim Buchalka who keeps updating the course as new LTS version of Java are released
        https://www.udemy.com/course/java-the-complete-java-developer-course/
 3. Agile Manifesto: available in multiple languages
-   https://agilemanifesto.org/
-4. Download the Scrum Guide https://scrumguides.org/index.html
-   https://scrum.org for more information
+   -  https://agilemanifesto.org/
+4. Download the Scrum and Nexus Guides. Some references for more information:
+    - https://scrumguides.org/index.html                      An overview of Scrum Guides
+    - https://scrumguides.org/scrum-guide.html                Download your Scrum Guide here    
+    - https://scrum.org                                       Scrum Homepage
+    - https://scrum.org/resources/scrum-guide                 Scrum Guide
+    - https://scrum.org/resources/nexus-guide                 Nexus Guide
+    - https://scrum.org/resources/kanban-guide-scrum-teams    Kanban Guide
+    - https://scrum.org/resources/scrum-guide                 Scrum Guide
+    - https://scrum.org/resources/                            Additional Scrum.org resources
 5. Agile FM Podcast - Radio for the Agile Community
     - Agile is applied beyond IT: Listen to ideas, success stories and pitfalls.
-    - https://www.agile.fm/agilefm
+    - https://agile.fm/agilefm
 6. Books worth considering for future reference. I expect them to stand the test of time.
     1. Head First Java, 3rd edition, ISBN 9781491910771
        Based on Java 8 - 17. Great for software maintenance purposes by revisiting older versions of Java.
@@ -171,3 +185,4 @@ Now, let's start your future-proof Software Engineering career
         9.  SuperSimpleDev        https://www.youtube.com/@SuperSimpleDev
         10. Coder Coder           https://www.youtube.com/@TheCoderCoder
         11. Your Average Tech Bro https://www.youtube.com/@YourAverageTechBro
+        12. Spring Framework Guru https://www.youtube.com/@SpringframeworkGuru
