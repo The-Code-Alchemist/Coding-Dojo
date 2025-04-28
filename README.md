@@ -7,13 +7,18 @@ Here's an opinionated view of what you'll need to get started as a Software Engi
     - Linux
 2. This repo has been developed under Windows using the tools listed below.
     - Clone this [Coding Dojo GitHub repository](https://github.com/The-Code-Alchemist/Coding-Dojo/) and see for yourself!
+    `git clone https://github.com/The-Code-Alchemist/Coding-Dojo/`
 3. The intention for later stages is to upgrade to newer LTS versions of Java SE as they become available and as the Coding Dojo advances.
     - The same is true for any other parts such as Maven, IntelliJ IDEA, etc.
     - Think of it as a living code base that matures and grows.
+4. More aspects of DevOps Engineering is to be added to The Coding Dojo in addition to the basics of
+   - [Java](Guides%20on%20How-to/Java%20References.md)
+   - [Git](Guides%20on%20How-to/Git%20SCM.md)
+   - [Maven](Guides%20on%20How-to/Maven.md)
+   - [IntelliJ](Guides%20on%20How-to/IntelliJ.md)
 
-Now, let's start your future-proof Software Engineering career
+Now, let's start your future-proof DevOps Engineering career
 ## 1 - Java Standard Edition (SE) - A programming language for writing your programs
--  Steps 1 through 5 are necessary, the rest are references
 1. Oracle has the multiple LTS versions of Java SE available: 8, 11, 17, 21, 25 (upcoming), and beyond. [Download a JDK of your choice here](https://www.oracle.com/nl/java/technologies/downloads/)     
    "free to use in production and free to redistribute, at no cost, under the [Oracle No-Fee Terms and Conditions](https://www.oracle.com/downloads/licenses/no-fee-license.html) 
 2. Install Java to a specific folder, for example: 
@@ -25,39 +30,21 @@ Now, let's start your future-proof Software Engineering career
    Shows the version of your Java Virtual Machine (JVM)
    ### `javac -version`
    Shows the version of your Java Development Kit (JDK)
-6. [The Java SE API documentation can serve as a reference (multiple versions available)](https://www.oracle.com/java/technologies/java-se-api-doc.html)
-7. [Oracle Java SE Support Roadmap](https://www.oracle.com/java/technologies/java-se-support-roadmap.html) 
-8. [Java Language and Virtual Machine Specifications](https://docs.oracle.com/javase/specs/)
-9. [Java Platform, SE Documentation](https://docs.oracle.com/en/java/javase/)
-10. [Java SE White Papers](https://www.oracle.com/java/technologies/javase/javase-whitepapers.html)
-11. Check out Java on [YouTube](https://www.youtube.com/@java) where new releases and celebrations are shown live.
-12. [Java Champion Program](https://dev.java/community/jcs/)
-13. [Java Ranch](https://javaranch.com/)
+6. [Java References](Guides%20on%20How-to/Java%20References.md)
 
 ## 2 - Git: Version Control to keep track of your changes
-- [Install Git](https://git-scm.com/) and set up your name and e-mail (replace the placeholders with your own info)
+1. [Install Git](https://git-scm.com/) and use your command-line to verify which version you have installed
+### `git -v` shows you the operating system and version number of Git
+You can now use Git from the command-line
+- Useful tip: Open a terminal in your IDE since most modern IDEs have a built-in terminal. 
+- How to do it using [IntelliJ](Guides%20on%20How-to/IntelliJ.md)
+2. Set up your name and e-mail by replacing the placeholders with your own information
 ### `git config --global user.name “Your Name”`
 ### `git config --global user.email “your.name@your-email.com”`
-1. You can now use Git from the command-line
-   - Useful tip: Open a terminal in your IDE since most modern IDEs have a built-in terminal.
-2. [A brief introduction to Git for beginners | GitHub](https://www.youtube.com/watch?v=r8jQ9hVA2qs) 
-- A version control is a system that tracks changes to files over a period of time.
-- The working directory is where you make changes to your files such as a workspace.
-- The staging area or index is where you prepare your changes before committing them.
-    - Think of it a draft space that allows you to review and adjust the changes before they become part of the project's history
-        - In other words, where the changes are not definitive yet
-- A local repository is your project's history stored on your computer including commits and branches acting as a personal record of the project's changes
-- A remote repository is a version of your project hosted on the internet such as GitHub or a network.
-    - Allows multiple people such as an entire Scrum Team to collaborate by:
-        - Pushing to the shared resource
-        - Pulling from the shared resource
-- Branches are parallel versions of your project where you can work on different features or fixes independently without affecting the main project
-3. [Git cheat sheet from GitHub](https://education.github.com/git-cheat-sheet-education.pdf)
-4. [Git cheat sheet from GitLab](http://about.gitlab.com/images/press/git-cheat-sheet.pdf)
-5. [Git cheat sheet from Atlassian](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet)
-6. [Free Code Camp's Git cheat sheet](https://www.freecodecamp.org/news/git-cheat-sheet/)
-7. [Git Tutorial for Beginners: Learn Git in 1 Hour](https://www.youtube.com/watch?v=8JJ101D3knE&t=573s)
-8. [Merge Vs. Rebase](https://www.youtube.com/shorts/nzv0sbfprJo)
+3. Clone the [Coding Dojo Git repository](https://github.com/The-Code-Alchemist/Coding-Dojo/) from GitHub to get started
+### Click on the URL to see it on GitHub
+### Or clone directly from the command-line `git clone https://github.com/The-Code-Alchemist/Coding-Dojo/`
+4. [Git, GitHub and Gitlab references](Guides%20on%20How-to/Git%20SCM.md)
 
 ## 3 - Maven: Build what you developed and keep dependency versions up-to-date
 1. [Download Maven](https://maven.apache.org/download.cgi)
@@ -77,24 +64,8 @@ Now, let's start your future-proof Software Engineering career
       ### `mvn -v`
       Alternative: 
       ### `mvn -version`
-4. After setting up Maven, you can continue your repeatable builds with or without an IDE 
-5. Frequently used Maven commands and their meaning:
-    ### `mvn clean`
-      - Deletes the target directory and its generated sources
-    ### `mvn clean verify`
-      - Deletes the target directory and its generated sources 
-    ### `mvn compile`
-      - Compiles all source codes and recreates the deleted directories
-    ### `mvn package`
-      - Runs compile first, also runs any unit tests and package that based on the declared packaging tag
-    ### `mvn install`       Similar to the package command, but copies it (e.g. the packaged jar, war or ear) to your local Maven repository.
-      - This could be as follows under Windows `C:\Users\<UserName>\.m2\repository\`
-    ### `mvn deploy` 
-      - (Beyond the scope of this session, but worth learning)
-
-    ### `mvn clean install`               Combines the clean and install Maven goals
-    ### `mvn clean install -DskipTests`   Combines the clean and install Maven goals, except the tests are skipped.
-    ### `mvn clean test`                  Executes the unit tests
+4. After setting up Maven, you can continue your repeatable builds with or without an IDE
+   How to do it using [IntelliJ](Guides%20on%20How-to/IntelliJ.md)
 
 - N.B. Maven version 3.9.9 has been used within IntelliJ under Windows 11.
   At least Java SE 17 will be necessary as of Maven 4 (already part of this project).
@@ -102,7 +73,7 @@ Now, let's start your future-proof Software Engineering career
 ## 4 - IntelliJ: Java and Kotlin's goto Integrated Development Environment (IDE)
 ### 4.1 - [Download and Install IntelliJ](https://www.jetbrains.com/idea/download/)
   - The Community Edition is completely free to use.
-  - The Ultimate Edition for Professional Software Development - free to try out for 30 days.
+  - The Ultimate Edition for Professional Software Development - free to try out for 30 days with it additional features.
   - Suggestion to install IntelliJ into: `C:\dev\JetBrains\IntelliJ IDEA <version.number>\`
 - [Get started](https://www.jetbrains.com/help/idea/getting-started.html)
 - [Maven support](https://www.jetbrains.com/help/idea/maven-support.html)
@@ -125,105 +96,41 @@ Now, let's start your future-proof Software Engineering career
       - [Gherkin](https://plugins.jetbrains.com/plugin/9164-gherkin/)
       - [AI Assistant](https://plugins.jetbrains.com/plugin/22282-jetbrains-ai-assistant)
       - There's a lot more out there! Check out the Plugins section in the Settings of IntelliJ
+### 4.3 Build Project vs. Rebuild Project
+  - `Build` --> `Build Project` is an incremental build that only builds what has changed 
+        - Skips over what has not changed
+  - `Build` --> `Rebuild Project` removes everything and rebuilds everything completely
 ### Use any IDE to suit your personal preferences
-  - No need to limit yourself to one IDE
-    - Although I'd recommend knowing more than one IDE, this Coding Dojo will focus on IntelliJ 
-  - After setting up Java, you can continue programming from an IDE of your choice. 
-    - The following IDEs are also suitable for developing Java code
+  - The Coding Dojo's intention is to work out the sources using an IDE agnostic approach, however this Coding Dojo uses IntelliJ
+  - After setting up Java, Maven and Git, continue programming from an IDE of your choice. 
+    - The following IDEs are also suitable for developing Java code in addition to IntelliJ
     -  [Eclipse](https://eclipseide.org/)
     -  [Netbeans](https://netbeans.apache.org/front/main/index.html)
     -  [JDeveloper](https://www.oracle.com/nl/application-development/technologies/jdeveloper.html)
     -  [BlueJ](https://www.bluej.org/)
     -  [Visual Studio Code](https://code.visualstudio.com/)
+  - I'd recommend knowing at least one more IDE in addition to IntelliJ
 
-## Future Additions to the Coding Dojo
-1. Java Frameworks to consider
-    1. [Jakarta EE](https://jakarta.ee/)
-    2. [Springboot](https://spring.io/projects/spring-boot)
-    3. [Quarkus](https://quarkus.io/)
-    4. [Micronaut](https://micronaut.io/)
-2. Test your work
-    1. [JUnit](https://junit.org/)
-    2. [Cucumber](https://cucumber.io/)
-       - [How to install Cucumber](https://cucumber.io/docs/installation/java)
-    3. [TestNG](https://testng.org/)
-    4. [Arquillian](https://arquillian.org/)
-    5. [Playwright](https://playwright.dev/)
-3. Automation Server
-    1. [Jenkins](https://www.jenkins.io/)
-4. CI/CD
-    1. [GitHub](https://github.com)
-    2. [GitLab](https://gitlab.com)
-    3. [Bitbucket](https://bitbucket.org/)
-5. Containerize
-    1. [Docker](https://www.docker.com/)
-       - `docker -v` Shows the version of Docker
-       - `docker ps` 
-    2. [Kubernetes](https://kubernetes.io/)
-       - [Kube by example](https://kubebyexample.com/) 
-    3. [OpenShift](https://www.redhat.com/en/technologies/cloud-computing/openshift)
+## 5 - Agile, Scrum and other frameworks to combine with
+As a Software or DevOps engineer, your most likely setup will be in a Scrum Team, so have a look at the following sources
+1. [The Agile Manifesto](https://agilemanifesto.org/) - available in multiple languages
+   - We are uncovering better ways of developing software by doing it and helping others do it.
+   Through this work we have come to value:
+   1. Individuals and interactions over processes and tools
+   2. Working software over comprehensive documentation
+   3. Customer collaboration  over contract negotiation
+   4. Responding to change over following a plan
+   That is, while there is value in the items on the right, we value the items on the left more.
+   [Principles Behind the Agile Manifesto](https://agilemanifesto.org/principles.html)  
+   
+2. [Click here](Guides%20on%20How-to/Agile%20Scrum%20and%20Kanban%20References.md) for additional references about 
+   1. Agile
+   2. Scrum
+   3. Kanban
+   4. Lean Six Sigma
 
-6. Code Quality
-    1. [SonarQube](https://www.sonarsource.com/products/sonarqube/)
-    2. [Sigrid](https://www.softwareimprovementgroup.com/sigrid-software-excellence-platform/)
-7. Artificial Intelligence that may be able to help even further
-    1. [ChatGPT](https://chatgpt.com/)       
-    2. [Copilot](https://copilot.microsoft.com/)       
-    3. [Deepseek](https://www.deepseek.com/)
+## 6 - Recommended courses & literature to keep going
+- Work in progress: here's [a preliminary overview](Guides%20on%20How-to/Books%20and%20Video%20Course%20Recommendations.md)
 
-## Recommended courses & literature to keep going
-1. Pluralsight (requires a subscription)
-    1. Extensive Library - [Tailor to your specific needs from an extensive library](https://pluralsight.com/).
-    2. There's a [Java SE 17 Track](https://app.pluralsight.com/paths/skill/java-se-17), including a crash course on Maven.
-2. Udemy Courses (No recurring payment)
-    1. Courses can be purchased individually. These two are definitely worth considering:
-    2. [Java 21, Java 17, Java 11, Java 8 (adv.) and Spring Boot 3 by Dr. Seán Kennedy](https://www.udemy.com/course/ocp11_from_oca8)
-    3. [Java Masterclass 2025: 130+ Hours of Expert Lessons](https://www.udemy.com/course/java-the-complete-java-developer-course/)
-       by Tim Buchalka who keeps updating the course as new LTS version of Java are released
-3. [Agile Manifesto](https://agilemanifesto.org/) - available in multiple languages
-4. Download the Scrum and Nexus Guides. Some references for more information:
-    - [An overview of Scrum Guides](https://scrumguides.org/index.html)
-    - [Download your Scrum Guide here](https://scrumguides.org/scrum-guide.html)
-    - [Scrum Homepage](https://scrum.org)
-    - [Scrum Guide](https://scrum.org/resources/scrum-guide)
-    - [Nexus Guide](https://scrum.org/resources/nexus-guide)
-    - [Kanban Guide](https://scrum.org/resources/kanban-guide-scrum-teams)
-    - [Scrum Guide](https://scrum.org/resources/scrum-guide)
-    - [Additional resources](https://scrum.org/resources/)
-5. [Agile FM Podcast - Radio for the Agile Community](https://agile.fm/agilefm)
-    - Agile is applied beyond IT: Listen to ideas, success stories and pitfalls.
-6. Books worth considering for future reference. I expect them to stand the test of time.
-    1. [Head First Java, 3rd edition](https://www.oreilly.com/library/view/head-first-java/9781492091646/)
-       - Based on Java 8 - 17. Great for software maintenance purposes by revisiting older versions of Java.
-       - [Clone the code from O'Reilly](https://resources.oreilly.com/examples/0636920034452.git)
-    2. Learn Java with Projects, ISBN 9781837637188
-       - Based on Java 21
-    3. Head First Git, ISBN 9781492092513
-    4. Refactoring, ISBN 9780134757599
-    5. Software Improvement Group
-        1. Building Maintainable Software - Java edition, ISBN 9781491953525 - [Get your free copy here](https://www.softwareimprovementgroup.com/wp-content/uploads/Building_Maintainable_Software_SIG_Java.compressed.pdf)
-        2. Building Maintainable Software - C# edition
-        3. Building Software Teams, ISBN 9781491951774
-    6. Robert "Uncle Bob" Martin
-        - Have a look at his websites and some of his books
-        - [Uncle Bob Martin](http://cleancoder.com/)
-        - [Clean Code Blog](http://butunclebob.com/)
-        1. Clean Code, ISBN 9780132350884
-        2. The Clean Coder, ISBN 9780137081073
-        3. We, Programmers, ISBN 9780135344262
-        4. Functional Design, ISBN 9780138176396
-        5. Clean Architecture, ISBN 9780134494166
-    7. For the Brogrammers who want to take a practical Jack of all trades approach to their full stack Software Engineering career
-        1. [Bro Code](https://www.youtube.com/@BroCodez)
-        2. [AmigosCode](https://www.youtube.com/@amigoscode)
-        3. [Fireship](https://www.youtube.com/@Fireship)
-        4. [Programming with Mosh](https://www.youtube.com/@programmingwithmosh)
-        5. [Coding with John](https://www.youtube.com/@CodingWithJohn)
-        6. [freeCodeCamp.org](https://www.youtube.com/@freecodecamp)
-        7. [SimpliLearn](https://www.youtube.com/@SimplilearnOfficial)
-        8. [JavaScript King](https://www.youtube.com/@JavaScriptKing)
-        9. [SuperSimpleDev](https://www.youtube.com/@SuperSimpleDev)
-       10. [Coder Coder](https://www.youtube.com/@TheCoderCoder)
-       11. [Your Average Tech Bro](https://www.youtube.com/@YourAverageTechBro)
-       12. [Spring Framework Guru](https://www.youtube.com/@SpringframeworkGuru)
-            - There's a [Spring Ahead track](https://www.udemy.com/user/spring-ahead-code-academy/) on Udemy as well
+## 7 - Future Additions to the Coding Dojo
+- [An overview](Guides%20on%20How-to/Future%20Work.md) of upcoming tools and techniques 
