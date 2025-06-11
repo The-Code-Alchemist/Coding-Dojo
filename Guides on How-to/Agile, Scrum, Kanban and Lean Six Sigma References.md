@@ -6,7 +6,9 @@
 - [Scrum Guide](https://scrum.org/resources/scrum-guide)
 - [Additional scrum.org resources](https://scrum.org/resources/)
 - [Agile Kata Pro](https://www.agilekata.pro/)
+- [Agile Coach: Let's find the right fit.](https://www.agilecoach.com/)
 - [Age of Product](https://age-of-product.com/)
+- [Venkat Subramaniam's Agile Developer](https://agiledeveloper.com/web)
  
 ## Nexus
 - [Nexus Guide](https://scrum.org/resources/nexus-guide)

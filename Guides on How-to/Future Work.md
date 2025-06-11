@@ -14,6 +14,7 @@
     3. [Bitbucket](https://bitbucket.org/)
 4. Containerize
     1. [Docker](https://www.docker.com/)
+        - [Use containers to Build, Share and Run your applications](https://www.docker.com/resources/what-container/)
         - `docker -v` Shows the version of Docker
         - `docker ps`
     2. [Kubernetes](https://kubernetes.io/)
@@ -26,4 +27,5 @@
 6. Artificial Intelligence that may be able to help even further
     1. [ChatGPT](https://chatgpt.com/)
     2. [Copilot](https://copilot.microsoft.com/)
+       - [Copilot on GitHub](https://github.com/copilot)
     3. [Deepseek](https://www.deepseek.com/)

@@ -9,15 +9,24 @@
        by Tim Buchalka who keeps updating the course as new LTS version of Java are released
 3. Books worth considering for future reference. I expect them to stand the test of time.
     1. [Head First Java, 3rd edition](https://www.oreilly.com/library/view/head-first-java/9781492091646/)
-        - Based on Java 8 - 17. Great for software maintenance purposes by revisiting older versions of Java.
+        - Based on Java 8–17. Great for software maintenance purposes by revisiting older versions of Java.
+        - Grasp concepts without losing them in details without dumbing down the material.
+        - Learn how to use Java through straightforward and elegant examples to create software.
+        - Fun, casual, and full of worldly analogies.
+        - Stories, annotated code, mock interviews, and brain exercises.
+        - Practical, playful, educational, and engaging.
+        - The engaging style drags you from know-nothing to Java warrior status.
+        - Suitable for people who like to learn new programming languages, and do not come from a Computer Science or Programming background.
+        - Just the right tone for the geeked-out, casual-cool guru coder in all of us.
+        - The right reference for practical development strategies to get your brain going without having to slog through a bunch of tired stale professor-speak.
         - [Clone the code from O'Reilly](https://resources.oreilly.com/examples/0636920034452.git)
     2. Learn Java with Projects, ISBN 9781837637188
         - Based on Java 21
     3. Head First Git, ISBN 9781492092513
     4. Refactoring, ISBN 9780134757599
     5. Software Improvement Group
-        1. Building Maintainable Software - Java edition, ISBN 9781491953525 - [Get your free copy here](https://www.softwareimprovementgroup.com/wp-content/uploads/Building_Maintainable_Software_SIG_Java.compressed.pdf)
-        2. Building Maintainable Software - C# edition
+        1. Building Maintainable Software—Java edition, ISBN 9781491953525 - [Get your free copy here](https://www.softwareimprovementgroup.com/wp-content/uploads/Building_Maintainable_Software_SIG_Java.compressed.pdf)
+        2. Building Maintainable Software—C# edition
         3. Building Software Teams, ISBN 9781491951774
     6. Robert "Uncle Bob" Martin
         - Have a look at his websites and some of his books
@@ -43,3 +52,5 @@
         11. [Your Average Tech Bro](https://www.youtube.com/@YourAverageTechBro)
         12. [Spring Framework Guru](https://www.youtube.com/@SpringframeworkGuru)
             - There's a [Spring Ahead track](https://www.udemy.com/user/spring-ahead-code-academy/) on Udemy as well
+        13. [Digital Ocean](https://www.youtube.com/@DigitalOcean)
+        14. [Learn wit Huw](https://www.youtube.com/@LearnWithHuw)

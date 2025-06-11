@@ -24,3 +24,31 @@ Combines the `clean` and `install` Maven goals
 Combines the `clean` and `install` Maven goals, except the tests are skipped.
 ## `mvn clean test`
 Executes the unit tests
+
+
+## Scopes in Maven
+
+The scope determines the extent to which a
+
+No explicit scope defaults to the compile scope
+
+### JUnit 5 Example
+Scope limited to the tests alone
+```
+<dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter-api</artifactId>
+    <version>5.11.4</version>
+    <scope>test</scope>
+</dependency>
+```
+
+## Excluding Maven Dependencies
+
+coming soon
+
+
+## References
+[Working With Maven in IntelliJ IDEA](https://www.youtube.com/watch?v=pt3uB0sd5kY)
+[The Apache Foundation](https://apache.org/) maintains the Maven project, which is a build automation tool primarily for Java projects. It can also be used to manage dependencies and project configurations.
+[Apache Commons](https://commons.apache.org/)
