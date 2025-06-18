@@ -14,7 +14,7 @@ Here's an opinionated view of what you'll need to get started as a Software Engi
     - Get comfortable with sizable Java code bases, since you will be working with them regularly.
     - See standard Java tooling and libraries in action to consolidate your knowledge and skills in a real-world setting.
     - The Coding Dojo is a work in progress, so expect changes and improvements over time. Think of it as a living code base that matures and grows.
-4. More aspects of DevOps Engineering is to be added to The Coding Dojo in addition to the basics of
+4. More aspects of DevOps Engineering are to be added to The Coding Dojo in addition to the basics of:
    - [Java](Guides%20on%20How-to/Java%20References.md)
    - [Git](Guides%20on%20How-to/Git%20SCM.md)
    - [Maven](Guides%20on%20How-to/Maven.md)
@@ -40,8 +40,8 @@ Now, let's start your future-proof DevOps Engineering career
 7. [JDK 11 Documentation](https://docs.oracle.com/en/java/javase/11/)
 8. [JDK 17 Documentation](https://docs.oracle.com/en/java/javase/17/)
 9. [JDK 21 Documentation](https://docs.oracle.com/en/java/javase/21/)
-9. [JDK 25 Documentation](https://docs.oracle.com/en/java/javase/25/)
-10. [More Java References](Guides%20on%20How-to/Java%20References.md)
+10. [JDK 25 Documentation](https://docs.oracle.com/en/java/javase/25/)
+11. [More Java References](Guides%20on%20How-to/Java%20References.md)
 
 ## 2-Git: Version Control to keep track of your changes
 1. [Install Git](https://git-scm.com/) and use your command-line to verify which version you have installed
@@ -80,24 +80,33 @@ N.B. Never commit the following to your Git repository to keep it clean and safe
     - Try out artifacts, dependencies, and archetypes
     - https://mvnrepository.com/
     - https://maven.apache.org/
-    - https://central.sonatype.com/
+    - https://maven.apache.org/guides/index.html
+    - https://maven.apache.org/plugins/index.html
+    [- Maven Central Repository](https://search.maven.org/) redirects to the [Sonatype Central Repository](https://central.sonatype.com/) 
 2. Extract the maven zip file to a directory of your choice such as
     - `C:\dev\apache-maven-<version.number>`
-3. Set MAVEN_HOME to the directory to which you extracted the Maven zip folder
-   such as `C:\dev\apache-maven-<version.number>`
+3. Set MAVEN_HOME to the directory to which you extracted the Maven zip folder, such as
+    `C:\dev\apache-maven-<version.number>`
     - Add `%MAVEN_HOME%\bin` to your `PATH` system variable
-    - Use one of the following commands to check whether Maven has been set properly such as the correct version number. 
-    - Use a terminal such as Windows has the PowerShell for example or something similar 
+    - Use one of the following commands to check whether Maven has been set properly, such as the correct version number. 
+    - Use a terminal such as Windows has the PowerShell, for example, or something similar 
     - Make sure Maven is set up properly and execute one of these commands
       Preferred:   
       ### `mvn -v`
-      Alternative: 
-      ### `mvn -version`
-4. After setting up Maven, you can continue your repeatable builds with or without an IDE
-   How to do it using [IntelliJ](Guides%20on%20How-to/IntelliJ.md)
+      Alternatively, you can use: 
+      ### `mvn -version` or `mvn --version`
+    - This will show you the version of Maven, the Java version, and the operating system you're using
+4. Your local Maven repository will be created automatically in your home directory, and may look like:
+    `C:\Users\<user-name>\.m2\repository`
+5. After setting up Maven, you can continue your repeatable builds with or without an IDE
+    - How to do it using [IntelliJ](Guides%20on%20How-to/IntelliJ.md)
 
 - N.B. Maven version 3.9.9 has been used within IntelliJ under Windows 11.
   At least Java SE 17 will be necessary as of Maven 4 (already part of this project).
+- It may be worthwhile to learn other build tools such as Gradle, Ant, or Bazel, but Maven is the most widely used build tool in the Java ecosystem.
+- [Gradle](https://gradle.org/) is a popular alternative to Maven, especially for Android development and other JVM languages like Kotlin. Gradle is YML-based and offers more flexibility in defining build scripts compared to Maven's XML-based POM files.
+- [Ant](https://ant.apache.org/) is an older build tool still used in some legacy projects, but it is less common in modern Java development.
+- [Bazel](https://bazel.build/) is a build tool developed by Google that is gaining popularity for its speed and scalability, especially in large projects.
 
 ## 4-IntelliJ: Java and Kotlin's goto Integrated Development Environment (IDE)
 ### 4.1-[Download and Install IntelliJ](https://www.jetbrains.com/idea/download/)
@@ -110,7 +119,7 @@ N.B. Never commit the following to your Git repository to keep it clean and safe
 - [IntelliJ on YouTube](https://www.youtube.com/@intellijidea)
 - [JetBrains on YouTube](https://www.youtube.com/@JetBrainsTV)
 
-### 4.2—Bring it all together and set up shop with by configuring Java, Maven, and Git
+### 4.2-Bring it all together and set up shop with by configuring Java, Maven, and Git
   - Set up Java in IntelliJ: `File` --> `Settings --> Build, Execution, Deployment` --> `Compiler` --> `Java Compiler`
       Use the Java directory previously set up in the Maven home path such as: `C:\dev\Java\jdk-<version.number>`
   - Set up Maven in IntelliJ: `File` --> `Settings` --> `Build, Execution, Deployment` --> `Build Tools` --> `Maven`
@@ -126,11 +135,10 @@ N.B. Never commit the following to your Git repository to keep it clean and safe
       - [AI Assistant](https://plugins.jetbrains.com/plugin/22282-jetbrains-ai-assistant)
       - There's a lot more out there! Check out the Plugins section in the Settings of IntelliJ
 ### 4.4-Build Project vs. Rebuild Project
-  - `Build` --> `Build Project` is an incremental build that only builds what has changed 
-        - Skips over what has not changed
+  - `Build` --> `Build Project` is an incremental build that only builds what has changed—Skips over what has not changed
   - `Build` --> `Rebuild Project` removes everything and rebuilds everything completely
 ### Use any IDE to suit your personal preferences
-  - The Coding Dojo's intention is to work out the sources using an IDE agnostic approach, however this Coding Dojo uses IntelliJ
+  - The Coding Dojo's intention is to work out the sources using an IDE agnostic approach. However, this Coding Dojo uses IntelliJ
   - After setting up Java, Maven, and Git, continue programming from an IDE of your choice. 
     - The following IDEs are also suitable for developing Java code in addition to IntelliJ
     -  [Eclipse](https://eclipseide.org/)
