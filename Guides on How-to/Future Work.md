@@ -25,7 +25,9 @@
     1. [SonarQube](https://www.sonarsource.com/products/sonarqube/)
     2. [Sigrid](https://www.softwareimprovementgroup.com/sigrid-software-excellence-platform/)
 6. Artificial Intelligence that may be able to help even further
-    1. [ChatGPT](https://chatgpt.com/)
-    2. [Copilot](https://copilot.microsoft.com/)
+    1. [Junie](https://junie.ai/)
+    2. [Gemini](https://gemini.google.com/)
+    3. [ChatGPT](https://chatgpt.com/)
+    4. [Copilot](https://copilot.microsoft.com/)
        - [Copilot on GitHub](https://github.com/copilot)
-    3. [Deepseek](https://www.deepseek.com/)
+    5. [Deepseek](https://www.deepseek.com/)
