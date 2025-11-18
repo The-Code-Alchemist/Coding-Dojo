@@ -18,6 +18,7 @@ Here's an opinionated view of what you'll need to get started as a Software Engi
    - [Java](Guides%20on%20How-to/Java%20References.md)
    - [Git](Guides%20on%20How-to/Git%20SCM.md)
    - [Maven](Guides%20on%20How-to/Maven.md)
+   - [Docker](Guides%20on%20How-to/Docker.md)
    - [IntelliJ](Guides%20on%20How-to/IntelliJ.md)
 
 The only way to decide the worth of any tutorial is to decide how well it teaches.
@@ -43,7 +44,7 @@ Now, let's start your future-proof DevOps Engineering career
 10. [JDK 25 Documentation](https://docs.oracle.com/en/java/javase/25/)
 11. [More Java References](Guides%20on%20How-to/Java%20References.md)
 
-## 2-Git: Version Control to keep track of your changes
+## 2—Git: Version Control to keep track of your changes
 1. [Install Git](https://git-scm.com/) and use your command-line to verify which version you have installed
     ### `git -v` shows you the operating system and version number of Git
     ### `git` command will show you a list of all the available commands
@@ -75,7 +76,7 @@ N.B. Never commit the following to your Git repository to keep it clean and safe
     - Never commit any IDE or machine-specific settings such as `.idea/` or `.vscode/` directories. Add these to your `.gitignore` file if they're not there already.
     - Never commit any sensitive information such as passwords, API keys, or personal data to a public repository.
 
-## 3-Maven: Build what you developed and keep dependency versions up-to-date
+## 3—Maven: Build what you developed and keep dependency versions up to date
 1. [Download Maven](https://maven.apache.org/download.cgi)
     - Try out artifacts, dependencies, and archetypes
     - https://mvnrepository.com/
@@ -87,7 +88,7 @@ N.B. Never commit the following to your Git repository to keep it clean and safe
     - `C:\dev\apache-maven-<version.number>`
 3. Set MAVEN_HOME to the directory to which you extracted the Maven zip folder, such as
     `C:\dev\apache-maven-<version.number>`
-    - Add `%MAVEN_HOME%\bin` to your `PATH` system variable
+    - Add `%MAVEN_HOME%\bin` to your `PATH` system variable if you're using Windows.
     - Use one of the following commands to check whether Maven has been set properly, such as the correct version number. 
     - Use a terminal such as Windows has the PowerShell, for example, or something similar 
     - Make sure Maven is set up properly and execute one of these commands
@@ -95,7 +96,7 @@ N.B. Never commit the following to your Git repository to keep it clean and safe
       ### `mvn -v`
       Alternatively, you can use: 
       ### `mvn -version` or `mvn --version`
-    - This will show you the version of Maven, the Java version, and the operating system you're using
+    - This will show you the version of Maven, its directory, JDK version, and the operating system you're using
 4. Your local Maven repository will be created automatically in your home directory, and may look like:
     `C:\Users\<user-name>\.m2\repository`
 5. After setting up Maven, you can continue your repeatable builds with or without an IDE
@@ -108,8 +109,13 @@ N.B. Never commit the following to your Git repository to keep it clean and safe
 - [Ant](https://ant.apache.org/) is an older build tool still used in some legacy projects, but it is less common in modern Java development.
 - [Bazel](https://bazel.build/) is a build tool developed by Google that is gaining popularity for its speed and scalability, especially in large projects.
 
-## 4-IntelliJ: Java and Kotlin's goto Integrated Development Environment (IDE)
-### 4.1-[Download and Install IntelliJ](https://www.jetbrains.com/idea/download/)
+## 4—Docker: Containerize your Application
+### 4.1—[What is Docker](https://docs.docker.com/get-started/docker-overview/)?
+
+### 4.2—[Download and Install Docker](https://docs.docker.com/get-started/get-docker/)
+
+## 5—IntelliJ: Java and Kotlin's goto Integrated Development Environment (IDE)
+### 5.1-[Download and Install IntelliJ](https://www.jetbrains.com/idea/download/)
   - The Community Edition is completely free to use.
   - The Ultimate Edition for Professional Software Development—free to try out for 30 days with it additional features.
   - Suggestion to install IntelliJ into: `C:\dev\JetBrains\IntelliJ IDEA <version.number>\`
@@ -119,7 +125,7 @@ N.B. Never commit the following to your Git repository to keep it clean and safe
 - [IntelliJ on YouTube](https://www.youtube.com/@intellijidea)
 - [JetBrains on YouTube](https://www.youtube.com/@JetBrainsTV)
 
-### 4.2-Bring it all together and set up shop with by configuring Java, Maven, and Git
+### 5.2-Bring it all together and set up shop with by configuring Java, Maven, and Git
   - Set up Java in IntelliJ: `File` --> `Settings --> Build, Execution, Deployment` --> `Compiler` --> `Java Compiler`
       Use the Java directory previously set up in the Maven home path such as: `C:\dev\Java\jdk-<version.number>`
   - Set up Maven in IntelliJ: `File` --> `Settings` --> `Build, Execution, Deployment` --> `Build Tools` --> `Maven`
@@ -127,14 +133,14 @@ N.B. Never commit the following to your Git repository to keep it clean and safe
       Do not use the Bundled version, unless you have a good reason to do so.
   - A shortcut for opening you current Project Structure to change any setting quickly --> `CTRL + ALT + SHIFT + S`
   - Learn IntelliJ's shortcuts. Access it from IntelliJ itself: `Help` --> `Keyboard Shortcuts PDF`
-### 4.3-Some strongly recommended Plugins
+### 5.3-Some strongly recommended Plugins
   - `File` --> `Settings` --> `Plugins`
       - [SonarQube](https://plugins.jetbrains.com/plugin/7973-sonarqube-for-ide/)
       - [Cucumber](https://plugins.jetbrains.com/plugin/7212-cucumber-for-java/)
       - [Gherkin](https://plugins.jetbrains.com/plugin/9164-gherkin/)
       - [AI Assistant](https://plugins.jetbrains.com/plugin/22282-jetbrains-ai-assistant)
       - There's a lot more out there! Check out the Plugins section in the Settings of IntelliJ
-### 4.4-Build Project vs. Rebuild Project
+### 5.4-Build Project vs. Rebuild Project
   - `Build` --> `Build Project` is an incremental build that only builds what has changed—Skips over what has not changed
   - `Build` --> `Rebuild Project` removes everything and rebuilds everything completely
 ### Use any IDE to suit your personal preferences
@@ -148,7 +154,7 @@ N.B. Never commit the following to your Git repository to keep it clean and safe
     -  [Visual Studio Code](https://code.visualstudio.com/)
   - I'd recommend knowing at least one more IDE in addition to IntelliJ
 
-## 5-Agile, Scrum, and other frameworks to combine with
+## 6-Agile, Scrum, and other frameworks to combine with
 As a Software or DevOps engineer, your most likely setup will be in a Scrum Team, so have a look at the following sources
 1. [The Agile Manifesto](https://agilemanifesto.org/) - available in multiple languages
    - We are uncovering better ways of developing software by doing it and helping others do it.
@@ -166,8 +172,8 @@ As a Software or DevOps engineer, your most likely setup will be in a Scrum Team
    3. Kanban
    4. Lean Six Sigma
 
-## 6-Recommended courses and literature to keep going
+## 7-Recommended courses and literature to keep going
 - Work in progress: here's [a preliminary overview](Guides%20on%20How-to/Books%20and%20Video%20Course%20Recommendations.md)
 
-## 7-Future Additions to the Coding Dojo
+## 8-Future Additions to the Coding Dojo
 - [An overview](Guides%20on%20How-to/Future%20Work.md) of upcoming tools and techniques 
