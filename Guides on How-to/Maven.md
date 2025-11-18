@@ -20,15 +20,15 @@
 
 ### What is a POM file?
 1. The POM (Project Object Model) file is the core of a Maven project.
-- It is an XML file named `pom.xml` that defines the project's structure, dependencies, build configuration, and other project-related information.
-- The POM file is located in the root directory of the project.
+   - It is an XML file named `pom.xml` that defines the project's structure, dependencies, build configuration, and other project-related information.
+   - The POM file is located in the root directory of the project.
 2. It contains information such as the project's group ID, artifact ID, version, packaging type, and dependencies.
-- The POM file also defines the build process, including plugins and goals to be executed during the build.
-- It serves as a central configuration file for the project, allowing Maven to understand how to build and manage the project.
+   - The POM file also defines the build process, including plugins and goals to be executed during the build.
+   - It serves as a central configuration file for the project, allowing Maven to understand how to build and manage the project.
 3. The POM file can also inherit from other POM files, allowing for a hierarchical structure of project configurations.
 4. BOM (Bill of Materials) is a special type of POM file that defines a set of dependencies and their versions for a project.
-- It is used to manage dependencies across multiple projects and ensure consistent versions of libraries.
-- A BOM file can be imported into a project's POM file to automatically include the defined dependencies and their versions.
+   - It is used to manage dependencies across multiple projects and ensure consistent versions of libraries.
+   - A BOM file can be imported into a project's POM file to automatically include the defined dependencies and their versions.
 
 ### How to create a Maven project in IntelliJ IDEA?
 1. Open IntelliJ IDEA and select "New Project" from the welcome screen or from the "File" menu.
@@ -46,86 +46,87 @@
 ### How to add dependencies in Maven?
 1. Open the `pom.xml` file in your Maven project.
 2. Locate the `<dependencies>` section in the POM file. If it does not exist, you can create it.
-```xml
-    <dependencies>
-        <!-- Add your dependencies here -->
-    </dependencies>
-```
+   ```xml
+       <dependencies>
+           <!-- Add your dependencies here -->
+       </dependencies>
+   ```
 3. Add a dependency by specifying its `groupId`, `artifactId`, and `version`. For example, to add the Apache Commons Lang library:
-```xml
-    <dependency>
-        <groupId>org.apache.commons</groupId>
-        <artifactId>commons-lang3</artifactId>
-        <version>3.12.0</version>
-    </dependency>
-```
-- Repeat this step for each dependency you want to add.
-- Instead of duplicating a version number for each dependency, you can define a `<properties>` section at the top of your `pom.xml` file to manage versions centrally:
-- 
-```xml
-<properties>
-    <junit.version>5.11.4</junit.version>
-    <commons-lang3.version>3.12.0</commons-lang3.version>
-</properties>
-<dependencies>
-    <dependency>
-        <groupId>org.junit.jupiter</groupId>
-        <artifactId>junit-jupiter-api</artifactId>
-        <version>${junit.version}</version>
-        <scope>test</scope>
-    </dependency>
-    <dependency>
-        <groupId>org.apache.commons</groupId>
-        <artifactId>commons-lang3</artifactId>
-        <version>${commons-lang3.version}</version>
-    </dependency>
-</dependencies>
-```
+   ```xml
+       <dependency>
+           <groupId>org.apache.commons</groupId>
+           <artifactId>commons-lang3</artifactId>
+           <version>3.12.0</version>
+       </dependency>
+   ```
+   - Repeat this step for each dependency you want to add.
+     - Instead of duplicating a version number for each dependency, you can define a `<properties>` section at the top of your `pom.xml` file to manage versions centrally:
+     - This allows you to easily update the version of a dependency in one place without having to change it in multiple places.
+   ```xml
+   <properties>
+       <junit.version>5.11.4</junit.version>
+       <commons-lang3.version>3.12.0</commons-lang3.version>
+   </properties>
+   <dependencies>
+       <dependency>
+           <groupId>org.junit</groupId>
+           <artifactId>junit-bom</artifactId>
+           <version>${junit.version}</version>
+           <scope>test</scope>
+           <type>pom</type>
+       </dependency>
+       <dependency>
+           <groupId>org.apache.commons</groupId>
+           <artifactId>commons-lang3</artifactId>
+           <version>${commons-lang3.version}</version>
+       </dependency>
+   </dependencies>
+   ```
 4. Add the scope if needed
-- The scope determines the extent to which a dependency is available in the project. Maven has several predefined scopes, each with its own purpose:
-- For example, to add JUnit 5 as a test dependency, you can specify the scope as `test`:
-```xml
-<dependency>
-    <groupId>org.junit.jupiter</groupId>
-    <artifactId>junit-jupiter-api</artifactId>
-    <version>5.11.4</version>
-    <scope>test</scope>
-</dependency>
-```
-- If no scope is specified, the default scope is `compile`, meaning the dependency will be available in the classpath at all times.
-```xml
-<dependency>
-    <groupId>org.apache.commons</groupId>
-    <artifactId>commons-lang3</artifactId>
-    <version>3.12.0</version>
-</dependency>
-```
+   - The scope determines the extent to which a dependency is available in the project. Maven has several predefined scopes, each with its own purpose:
+   - For example, to add JUnit 5 as a test dependency, you can specify the scope as `test`:
+   ```xml
+   <dependency>
+       <groupId>org.junit.jupiter</groupId>
+       <artifactId>junit-jupiter-api</artifactId>
+       <version>5.11.4</version>
+       <scope>test</scope>
+   </dependency>
+   ```
+   - If no scope is specified, the default scope is `compile`, meaning the dependency will be available in the classpath at all times.
+   ```xml
+   <dependency>
+       <groupId>org.apache.commons</groupId>
+       <artifactId>commons-lang3</artifactId>
+       <version>3.12.0</version>
+   </dependency>
+   ```
 5. Save the `pom.xml` file. IntelliJ IDEA will automatically download the specified dependency and add it to your project.
-- If you want to add an external dependency, you can search for it on the [Maven Central Repository](https://search.maven.org/) or other repositories.
-- You can also use the Maven Dependency plugin to search for dependencies directly from IntelliJ IDEA.
-- N.B. You are responsible for keeping these dependencies up to date and compatible with your project.
-5. You can add multiple dependencies by repeating the `<dependency>` block within the `<dependencies>` section.
+   - If you want to add an external dependency, you can search for it on the [Maven Central Repository](https://search.maven.org/) or other repositories.
+   - You can also use the Maven Dependency plugin to search for dependencies directly from IntelliJ IDEA.
+   - N.B. You are responsible for keeping these dependencies up to date and compatible with your project.
+6. You can add multiple dependencies by repeating the `<dependency>` block within the `<dependencies>` section.
 
 ### More about dependencies
 1. Q: What is a dependency in Maven? A: A dependency in Maven is a library or module that your project requires to compile, run, or test. Dependencies are defined in the `pom.xml` file and can be automatically downloaded from remote repositories.
-- Some of these repositories are not public and require authentication to access.
+   - Some of these repositories are not public and require authentication to access.
 2. Q: What is a transitive dependency? A: A transitive dependency is a dependency that is not directly declared in your project's `pom.xml` file but is required by one of your declared dependencies. Maven automatically resolves and includes these transitive dependencies in your project.
 
 ### Excluding Maven Dependencies
 1. Q: How to exclude a transitive dependency in Maven? A: You can exclude a transitive dependency by adding an `<exclusions>` section within the `<dependency>` block in your `pom.xml` file. For example:
-```xml
-<dependency>
-    <groupId>com.example</groupId>
-    <artifactId>my-library</artifactId>
-    <version>1.0.0</version>
-    <exclusions>
-        <exclusion>
-            <groupId>org.unwanted</groupId>
-            <artifactId>unwanted-library</artifactId>
-        </exclusion>
-    </exclusions>
-</dependency>
-```
+   ```xml
+   <dependency>
+       <groupId>com.example</groupId>
+       <artifactId>my-library</artifactId>
+       <version>1.0.0</version>
+       <exclusions>
+           <exclusion>
+               <groupId>org.unwanted</groupId>
+               <artifactId>unwanted-library</artifactId>
+           </exclusion>
+       </exclusions>
+   </dependency>
+   ```
 2. Q: Why would I want to exclude a dependency? A: You might want to exclude a dependency if it causes conflicts, is not needed for your project, or if you want to use a different version of the library that is not compatible with the transitive dependency.
 3. Q: How to find the dependencies of a Maven project? A: You can use the `mvn dependency:tree` command to view the dependency tree of your project, which shows all direct and transitive dependencies along with their versions. This can help you identify conflicts and understand the structure of your project's dependencies.
 
@@ -177,11 +178,11 @@ Similar to the `mvn package` command, but copies it to your local Maven reposito
 - It is a good practice to run this command after making changes to the code or dependencies to ensure that the local repository is up to date.
 - It is important to configure the local repository in the `settings.xml` file if you want to change the default location or use a different repository.
 - Example configuration in `settings.xml`:
-```xml
-<settings>
-    <localRepository>C:\another\folder\wherever\you\want\</localRepository>
-</settings>
-```
+    ```xml
+    <settings>
+        <localRepository>C:\another\folder\wherever\you\want\</localRepository>
+    </settings>
+    ```
 ## `mvn deploy`
 - Runs the `mvn install` command first to ensure that the artifact is built and installed in the local Maven repository.
 - It then uploads the packaged artifact to the specified remote repository, making it available for other projects to use.
@@ -189,23 +190,30 @@ Similar to the `mvn package` command, but copies it to your local Maven reposito
 - It is typically used in continuous integration (CI) pipelines to automate the deployment process.
 - It is important to configure the remote repository in the `pom.xml` file or in the Maven settings file (`settings.xml`) before running this command.
 - Example configuration in `pom.xml`:
-```xml
-<distributionManagement>
-    <repository>
-        <id>my-repo</id>
-        <url>https://my-repo.example.com/maven2</url>
-    </repository>
-    <snapshotRepository>
-        <id>my-snapshot-repo</id>
-        <url>https://my-repo.example.com/maven2-snapshots</url>
-    </snapshotRepository>
-</distributionManagement>
-```
+    ```xml
+    <distributionManagement>
+        <repository>
+            <id>my-repo</id>
+            <url>https://my-repo.example.com/maven2</url>
+        </repository>
+        <snapshotRepository>
+            <id>my-snapshot-repo</id>
+            <url>https://my-repo.example.com/maven2-snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+    ```
 
 ## `mvn clean install`               
 Combines the `clean` and `install` Maven goals
+
 ## `mvn clean install -DskipTests`
-Combines the `clean` and `install` Maven goals, except the tests are skipped.
+- Combines the `clean` and `install` Maven goals, except the tests are skipped.
+- This command is used to clean the project, compile the code, and install the packaged artifact in the local Maven repository without running tests.
+- It is typically used when you want to quickly build the project without running tests, such as during development or when making changes to the code that do not require testing.
+- It runs the `mvn clean` command first to ensure that the project is built from a clean state, removing any previous build artifacts.
+- It then runs the `mvn install` command to compile the code, package it into a distributable format, and install it in the local Maven repository.
+- It is important to note that skipping tests can lead to issues if the code is not thoroughly tested before deployment.
+- 
 ## `mvn clean test`
 - This command is used to run the unit tests in the project.
 - It runs the tests defined in the `src/test/java` directory and reports the results.
@@ -213,14 +221,14 @@ Combines the `clean` and `install` Maven goals, except the tests are skipped.
 - It is often used in combination with other Maven goals, such as `mvn compile` or `mvn package`, to ensure that the code is compiled and ready for testing.
 - If there are any test failures, they will be reported, and the build will fail.
 
-
-Daisy-chaining these commands together is a common practice in Maven projects to ensure that the project is built, tested, and packaged correctly.
+## Daisy chaining Maven goals
+- Daisy-chaining these commands together is a common practice in Maven projects to ensure that the project is built, tested, and packaged correctly.
 - For example, you can run `mvn clean install` to clean the project, compile the code, run tests, and package the project into a JAR or WAR file.
 - This ensures that the project is in a good state before deploying or releasing it.
 - It is important to note that Maven commands can be combined and customized based on the specific needs of the project.
 
-
 ## References
-[Working With Maven in IntelliJ IDEA](https://www.youtube.com/watch?v=pt3uB0sd5kY)
-[The Apache Foundation](https://apache.org/) maintains the Maven project, which is a build automation tool primarily for Java projects. It can also be used to manage dependencies and project configurations.
-[Apache Commons](https://commons.apache.org/)
+- [Working With Maven in IntelliJ IDEA](https://www.youtube.com/watch?v=pt3uB0sd5kY)
+- [The Apache Foundation](https://apache.org/) maintains the Maven project, which is a build automation tool primarily for Java projects. 
+  It can also be used to manage dependencies and project configurations.
+- [Apache Commons](https://commons.apache.org/)
