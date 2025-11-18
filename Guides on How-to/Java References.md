@@ -48,14 +48,14 @@ N.B. Sometimes code gets commented out using `//` or `/* ... */` to temporarily 
 - Packages in Java are used to group related classes and interfaces together, providing a way to organize code and avoid naming conflicts.
 - A package is a namespace that organizes a set of related classes and interfaces.
 - To create a package, you use the `package` keyword at the beginning of your Java source file. For example:
-```java
-    package com.example.myapp;
-```
+    ```java
+        package com.example.myapp;
+    ```
 - This declares that the classes in this file belong to the `com.example.myapp` package.
 - To use classes from a package, you can import them using the `import` statement. For example:
-```java
-    import com.example.myapp.MyClass;
-```
+    ```java
+        import com.example.myapp.MyClass;
+    ```
 - Uniqueness of package names is important to avoid conflicts, especially when using third-party libraries. It is common to use a reverse domain name as the package name, such as `com.example.myapp`, to ensure uniqueness.
 
     
@@ -85,8 +85,13 @@ N.B. Sometimes code gets commented out using `//` or `/* ... */` to temporarily 
    - Jakarta EE 10 is the first version with support for Java SE 17.
    - Jakarta EE 11 will be the first version with support for Java SE 21. Older versions than Java SE 17 are not supported.
    - MicroProfile is a subset of Jakarta EE, which is designed for microservices and cloud-native applications.
+   - Check out the [Jakarta EE YouTube channel](https://www.youtube.com/@JakartaEE) for more information.
 2. [Springboot](https://spring.io/projects/spring-boot)
+   - [Dan Vega's YouTube channel](https://www.youtube.com/@DanVega) explores Spring extensively. 
 3. [Quarkus](https://quarkus.io/)
+   - Quarkus is a Kubernetes-native Java framework tailored for GraalVM and OpenJDK HotSpot, designed to optimize Java specifically for containers.
+   - It offers a unified configuration system, live reload, and a developer-friendly experience.
+   - Have a look at the [Quarkus YouTube channel](https://www.youtube.com/@quarkusio) for more information.
 4. [Vert.x](https://vertx.io/)
    - [Vert.x by Example](https://vertx.io/docs/vertx-examples/java/)
 5. [Micronaut](https://micronaut.io/)
