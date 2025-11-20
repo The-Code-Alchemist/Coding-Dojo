@@ -167,7 +167,7 @@ Runs `mvn compile` first, also runs any unit tests and `package` that based on t
 ## `mvn install`       
 Similar to the `mvn package` command, but copies it to your local Maven repository which could be a packaged archive .jar, .war, or .ear
 - This could be as follows under Windows `C:\Users\<UserName>\.m2\repository\`
-- The m2 directory is the default local repository for Maven, where it stores downloaded dependencies and built artifacts.q
+- The .m2 directory is the default local repository for Maven, where it stores downloaded dependencies and built artifacts.
 - This command is used to install the packaged artifact into the local Maven repository, making it available for other projects on the same machine.
 - It is typically used when you want to use the built artifact in another project without deploying it to a remote repository.
 - It runs the `mvn package` command first to ensure that the artifact is built and ready for installation.
@@ -223,7 +223,9 @@ Combines the `clean` and `install` Maven goals
 
 ## Daisy chaining Maven goals
 - Daisy-chaining these commands together is a common practice in Maven projects to ensure that the project is built, tested, and packaged correctly.
-- For example, you can run `mvn clean install` to clean the project, compile the code, run tests, and package the project into a JAR or WAR file.
+- For example, you can run 
+  `mvn clean install` 
+  to clean the project, compile the code, run tests, and package the project into a JAR or WAR file.
 - This ensures that the project is in a good state before deploying or releasing it.
 - It is important to note that Maven commands can be combined and customized based on the specific needs of the project.
 
