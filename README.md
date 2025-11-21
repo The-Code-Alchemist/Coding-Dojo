@@ -48,15 +48,15 @@ Now, let's start your future-proof DevOps Engineering career
 1. [Install Git](https://git-scm.com/) and use your command-line to verify which version you have installed
     ### `git -v` shows you the operating system and version number of Git
     ### `git` command will show you a list of all the available commands
-You can now use Git from the command-line
-- Useful tip: Open a terminal in your IDE since most modern IDEs have a built-in terminal. 
-- How to do it using [IntelliJ](Guides%20on%20How-to/IntelliJ.md)
+    You can now use Git from the command-line
+   - Useful tip: Open a terminal in your IDE since most modern IDEs have a built-in terminal. 
+   - How to do it using [IntelliJ](Guides%20on%20How-to/IntelliJ.md)
 2. Set up your name and e-mail by replacing the placeholders with your own information
     ### `git config --global user.name “Your Name”`
     ### `git config --global user.email “your.name@your-email.com”`
-- `git config` gives an overview of available options
-- Run `git config --list`to check your set Git configuration options
-- `code .` to enter your IDE
+   - `git config` gives an overview of available options
+   - Run `git config --list`to check your set Git configuration options
+   - `code .` to enter your IDE
 3. Clone the [Coding Dojo Git repository](https://github.com/The-Code-Alchemist/Coding-Dojo/) from GitHub to get started
     ### Click on the URL to see it on GitHub
     ### Or clone directly from the command-line `git clone https://github.com/The-Code-Alchemist/Coding-Dojo/`
@@ -77,13 +77,7 @@ N.B. Never commit the following to your Git repository to keep it clean and safe
     - Never commit any sensitive information such as passwords, API keys, or personal data to a public repository.
 
 ## 3—Maven: Build what you developed and keep dependency versions up to date
-1. [Download Maven](https://maven.apache.org/download.cgi)
-    - Try out artifacts, dependencies, and archetypes
-    - https://mvnrepository.com/
-    - https://maven.apache.org/
-    - https://maven.apache.org/guides/index.html
-    - https://maven.apache.org/plugins/index.html
-    [- Maven Central Repository](https://search.maven.org/) redirects to the [Sonatype Central Repository](https://central.sonatype.com/) 
+1. [Download Maven](https://maven.apache.org/download.cgi) 
 2. Extract the maven zip file to a directory of your choice such as
     - `C:\dev\apache-maven-<version.number>`
 3. Set MAVEN_HOME to the directory to which you extracted the Maven zip folder, such as
@@ -97,10 +91,32 @@ N.B. Never commit the following to your Git repository to keep it clean and safe
       Alternatively, you can use: 
       ### `mvn -version` or `mvn --version`
     - This will show you the version of Maven, its directory, JDK version, and the operating system you're using
-4. Your local Maven repository will be created automatically in your home directory, and may look like:
-    `C:\Users\<user-name>\.m2\repository`
+4. Your local Maven repository will be created automatically in your home directory and may look like:
+    - `C:\Users\<user-name>\.m2\repository`
+    - These settings can be overridden in your IDE such as [IntelliJ](/Guides%20on%20How-to/IntelliJ.md)
+    - You can also override them in the `settings.xml` file in your Maven home directory
+    - For example, to override the local Maven repository to a centralized directory such as `C:\dev\maven-repository`
+      - Add the following to your `settings.xml` file in your Maven home directory: `<localRepository>C:\dev\maven-repository</localRepository>`
+      - Restart your IDE
+      - Maven will now use the centralized directory instead of the local one
+    - ~/.m2/repository is the default location for Maven to store artifacts and dependencies.
+      - Artifacts are the compiled code of your project.
+        - Artifacts are stored using information such as the artifact ID, version, and packaging type.
+        - This folder structure avoids name collisions between artifacts with the same ID and version.
+        - Duplication is avoided by using a hash of the artifact's contents as part of the filename.
+        - ```xml
+           <dependency>
+               <groupId>com.codealchemists</groupId>
+               <artifactId>coding-dojo</artifactId>
+               <version>1.0.0</version>
+               <packaging>ear</packaging>
+           </dependency>
+          ```
+      - Dependencies are the libraries that your project depends on.
 5. After setting up Maven, you can continue your repeatable builds with or without an IDE
     - How to do it using [IntelliJ](Guides%20on%20How-to/IntelliJ.md)
+    - Working With Maven in IntelliJ: [IntelliJ IDEA Tutorial: Maven](https://www.jetbrains.com/help/idea/maven.html)
+    - [Working With Maven in IntelliJ IDEA](https://www.youtube.com/watch?v=pt3uB0sd5kY)
 
 - N.B. Maven version 3.9.9 has been used within IntelliJ under Windows 11.
   At least Java SE 17 will be necessary as of Maven 4 (already part of this project).
@@ -117,7 +133,7 @@ N.B. Never commit the following to your Git repository to keep it clean and safe
 ## 5—IntelliJ: Java and Kotlin's goto Integrated Development Environment (IDE)
 ### 5.1-[Download and Install IntelliJ](https://www.jetbrains.com/idea/download/)
   - The Community Edition is completely free to use.
-  - The Ultimate Edition for Professional Software Development—free to try out for 30 days with it additional features.
+  - The Ultimate Edition for Professional Software Development — free to try out for 30 days with it additional features.
   - Suggestion to install IntelliJ into: `C:\dev\JetBrains\IntelliJ IDEA <version.number>\`
 - [Get started](https://www.jetbrains.com/help/idea/getting-started.html)
 - [Maven support](https://www.jetbrains.com/help/idea/maven-support.html)
