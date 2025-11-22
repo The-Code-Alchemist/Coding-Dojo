@@ -1,6 +1,7 @@
-Here is a beginner-friendly guide to Apache Maven, reorganized to help you get started immediately.
+Here is a beginner-friendly guide to Apache Maven,to help you get started immediately.
 
 # 🚀 Quick Start Guide to Apache Maven
+* Build what you developed and keep dependency versions up to date
 
 ## What is Maven?
 Think of Maven as the "manager" for your Java project. It is a build automation tool that handles the heavy lifting so you can focus on coding.
@@ -36,7 +37,7 @@ IntelliJ will generate the folder structure and the `pom.xml` file for you.
 ---
 
 ## 3. Managing Libraries (Dependencies)
-This is Maven's superpower. If you need a library, you don't download it manually. You simply "declare" it in your `pom.xml`.
+This is Maven's superpower. If you need a library, you don't download it manually. You "declare" it in your `pom.xml`.
 
 **How to add a library:**
 Inside the `<dependencies>` section of your POM file, add the library's coordinates. Maven will download it from the "Central Repository" automatically.
@@ -51,7 +52,7 @@ Inside the `<dependencies>` section of your POM file, add the library's coordina
     </dependency>
 </dependencies>
 ```
-
+Dependencies are the libraries that your project depends on.
 
 **Key Concepts:**
 *   **Transitive Dependencies:** If your library depends on *another* library, Maven downloads that one too automatically.
@@ -65,14 +66,14 @@ Inside the `<dependencies>` section of your POM file, add the library's coordina
 ## 4. Essential Maven Commands
 You run these commands to tell Maven what to do with your project. You can run these from the terminal or the "Maven" tab in IntelliJ.
 
-| Command | What it does |
-| :--- | :--- |
-| `mvn clean` | **Housekeeping.** Deletes the `target` folder (where compiled files live) to ensure a fresh build. |
-| `mvn compile` | **Translation.** Turns your `.java` source code into `.class` files. |
-| `mvn test` | **Verification.** Runs all unit tests found in `src/test/java`. |
-| `mvn package` | **Boxing up.** Compiles code, runs tests, and packages the result into a JAR or WAR file. |
+| Command | What it does                                                                                                                    |
+| :--- |:--------------------------------------------------------------------------------------------------------------------------------|
+| `mvn clean` | **Housekeeping.** Deletes the `target` folder (where compiled files live) to ensure a fresh build.                              |
+| `mvn compile` | **Translation.** Turns your `.java` source code into `.class` files.                                                            |
+| `mvn test` | **Verification.** Runs all unit tests found in `src/test/java`.                                                                 |
+| `mvn package` | **Boxing up.** Compiles code, runs tests, and packages the result into a JAR or WAR file.                                       |
 | `mvn install` | **Local Sharing.** Packages the project and puts it in your local repository (`.m2` folder) so other local projects can use it. |
-| `mvn deploy` | **Publishing.** Uploads your artifact to a remote server (like a corporate repository) for others to use. |
+| `mvn deploy` | **Publishing.** Uploads your artifact to a remote server (like a corporate repository) for others to use.                       |
 
 ### The "Pro" Workflow: Daisy Chaining
 You rarely run just one command. It is common practice to chain them to ensure a safe build.
@@ -90,4 +91,18 @@ This deletes old files (`clean`), compiles the code, runs the tests, packages th
 
 ## 5. Troubleshooting
 *   **Dependency Tree:** If you have conflicts, run `mvn dependency:tree` to see exactly which libraries are pulling in which transitive dependencies.
-*   **Repositories:** Maven downloads files from the internet (Central Repository) to your computer. It stores them in a local folder (usually `~/.m2/repository`). If a download fails, checking this folder or your internet connection is a good first step.
+*   **Repositories:** Maven downloads files from the internet (Central Repository) to your computer. 
+* It stores them in a local folder (usually `~/.m2/repository`). 
+* `~/.m2/repository` is the default location for Maven to store artifacts and dependencies.
+* Artifacts are the compiled code of your project.
+* If a download fails, checking this folder or your internet connection is a good first step.
+
+## 6. Overriding
+*   Example of a local repository`C:\Users\<user-name>\.m2\repository` that can be overridden.
+*   These settings can be overridden in your IDE such as [IntelliJ](/Guides%20on%20How-to/IntelliJ.md)
+*   You can also override settings in your `pom.xml` file or in your `.m2/settings.xml` file.
+
+## External Resources
+*   [Maven | IntelliJ IDEA Documentation](https://www.jetbrains.com/help/idea/maven.html)
+*   [Working With Maven in IntelliJ IDEA](https://www.youtube.com/watch?v=pt3uB0sd5kY)
+
