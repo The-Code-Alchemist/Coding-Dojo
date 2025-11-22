@@ -1,195 +1,132 @@
-# Coding Dojo
-Here's an opinionated view of what you'll need to get started as a Software Engineer.
-1. Open Source and Platform Independence take the lead, since anything in this list can be used with:
-    - Windows
-      - Suggestion: It's worth considering to install Java, Maven, Git, and IntelliJ into a centralized directory such as `C:\dev\` to access all your development tools more efficiently.
-    - macOS
-    - Linux
-    - Anything and everything mentioned in the Coding Dojo has a practical learner-centric focus where you can learn what you need freely and at your own pace.
-2. This repo has been developed under Windows using the tools listed below.
-    - Clone this [Coding Dojo GitHub repository](https://github.com/The-Code-Alchemist/Coding-Dojo/) and see for yourself!
-    `git clone https://github.com/The-Code-Alchemist/Coding-Dojo/`
-3. The intention for later stages is to upgrade to newer LTS versions of Java SE as they become available and as the Coding Dojo advances.
-    - The same is true for any other parts such as Maven, IntelliJ IDEA, etc.
-    - Get comfortable with sizable Java code bases, since you will be working with them regularly.
-    - See standard Java tooling and libraries in action to consolidate your knowledge and skills in a real-world setting.
-    - The Coding Dojo is a work in progress, so expect changes and improvements over time. Think of it as a living code base that matures and grows.
-4. More aspects of DevOps Engineering are to be added to The Coding Dojo in addition to the basics of:
-   - [Java](Guides%20on%20How-to/Java%20References.md)
-   - [Git](Guides%20on%20How-to/Git%20SCM.md)
-   - [Maven](Guides%20on%20How-to/Maven.md)
-   - [Docker](Guides%20on%20How-to/Docker.md)
-   - [IntelliJ](Guides%20on%20How-to/IntelliJ.md)
+# Coding Dojo 🥋
 
-The only way to decide the worth of any tutorial is to decide how well it teaches.
+**Welcome to your training ground**
 
-Now, let's start your future-proof DevOps Engineering career
-## 1—Java Standard Edition (SE)—A programming language for writing your programs
-1. Oracle has multiple LTS versions of Java SE available: 8, 11, 17, 21, 25 (upcoming), and beyond. [Download a JDK of your choice here](https://www.oracle.com/nl/java/technologies/downloads/)     
-   "free to use in production and free to redistribute, at no cost, under the [Oracle No-Fee Terms and Conditions](https://www.oracle.com/downloads/licenses/no-fee-license.html)" 
-2. Install Java to a specific folder, for example: 
-   ### `C:\dev\Java\jdk-17.0.1`
-3. Set this folder as a system environment variable: `JAVA_HOME`
-4. Add `%JAVA_HOME%\bin` to your `PATH` system variable
-5. Make sure Java is set up properly and execute these commands:
-   ### `java -version`
-   Shows the version of your Java Virtual Machine (JVM)
-   ### `javac -version`
-   Shows the version of your Java Development Kit (JDK)
-6. [Java Platform Standard Edition 8 Documentation](https://docs.oracle.com/javase/8/docs/)
-   - [Java Platform, Standard Edition (Java SE) 8 ](https://docs.oracle.com/javase/8/index.html)
-7. [JDK 11 Documentation](https://docs.oracle.com/en/java/javase/11/)
-8. [JDK 17 Documentation](https://docs.oracle.com/en/java/javase/17/)
-9. [JDK 21 Documentation](https://docs.oracle.com/en/java/javase/21/)
-10. [JDK 25 Documentation](https://docs.oracle.com/en/java/javase/25/)
-11. [More Java References](Guides%20on%20How-to/Java%20References.md)
+- This repository is an opinionated, practical, learner-centric guide designed to launch your career as a Software Engineer. 
+- It focuses on **Open Source** and **Platform Independence** (Windows, macOS, Linux).
+- In addition, it takes a framework-agnostic approach to learn DevOps Engineering.
+- Everything here allows you to learn at your own pace.
 
-## 2—Git: Version Control to keep track of your changes
-1. [Install Git](https://git-scm.com/) and use your command-line to verify which version you have installed
-    ### `git -v` shows you the operating system and version number of Git
-    ### `git` command will show you a list of all the available commands
-    You can now use Git from the command-line
-   - Useful tip: Open a terminal in your IDE since most modern IDEs have a built-in terminal. 
-   - How to do it using [IntelliJ](Guides%20on%20How-to/IntelliJ.md)
-2. Set up your name and e-mail by replacing the placeholders with your own information
-    ### `git config --global user.name “Your Name”`
-    ### `git config --global user.email “your.name@your-email.com”`
-   - `git config` gives an overview of available options
-   - Run `git config --list`to check your set Git configuration options
-   - `code .` to enter your IDE
-3. Clone the [Coding Dojo Git repository](https://github.com/The-Code-Alchemist/Coding-Dojo/) from GitHub to get started
-    ### Click on the URL to see it on GitHub
-    ### Or clone directly from the command-line `git clone https://github.com/The-Code-Alchemist/Coding-Dojo/`
-4. Create a Markdown file using the `touch Example.md` command. 
-   - This will come in handy for explanation purposes. 
-5. Git will start tracking changes of any folder when you use the command `git init` on it
-6. `git status` shows the changes and whether these changes have been staged or not
-7. `git add .` adds all the changes from the working directory to the staging area.
-   - `git status` will show a different color indicating the changes are in the staging area.
-8. `git commit -m 'Changes saved locally'` stores the changes locally
-   - the `-m` flag attaches a message to your commit
-9. `git push` stores the changes in the remote repository as well
-10. GitHub's' page: [What is Git? Our beginner’s guide to version control](https://github.blog/developer-skills/programming-languages-and-frameworks/what-is-git-our-beginners-guide-to-version-control/)
-11. [Git, GitHub and Gitlab References](Guides%20on%20How-to/Git%20SCM.md)
-    - My own summary is based on the most frequently used commands and some definitions.
-N.B. Never commit the following to your Git repository to keep it clean and safe:
-    - Never commit any IDE or machine-specific settings such as `.idea/` or `.vscode/` directories. Add these to your `.gitignore` file if they're not there already.
-    - Never commit any sensitive information such as passwords, API keys, or personal data to a public repository.
+**The Coding Dojo is a living code base**
+- The Coding Dojo matures and grows over time as you learn more about Java, Maven, and IntelliJ IDEA.
+- Expect updates to these tools as they become available.
+- Get comfortable with sizable code bases, since you will be working with them regularly professionally.
+- See it all in action to consolidate your knowledge and skills in a real-world setting.
 
-## 3—Maven: Build what you developed and keep dependency versions up to date
-1. [Download Maven](https://maven.apache.org/download.cgi) 
-2. Extract the maven zip file to a directory of your choice such as
-    - `C:\dev\apache-maven-<version.number>`
-3. Set MAVEN_HOME to the directory to which you extracted the Maven zip folder, such as
-    `C:\dev\apache-maven-<version.number>`
-    - Add `%MAVEN_HOME%\bin` to your `PATH` system variable if you're using Windows.
-    - Use one of the following commands to check whether Maven has been set properly, such as the correct version number. 
-    - Use a terminal such as Windows has the PowerShell, for example, or something similar 
-    - Make sure Maven is set up properly and execute one of these commands
-      Preferred:   
-      ### `mvn -v`
-      Alternatively, you can use: 
-      ### `mvn -version` or `mvn --version`
-    - This will show you the version of Maven, its directory, JDK version, and the operating system you're using
-4. Your local Maven repository will be created automatically in your home directory and may look like:
-    - `C:\Users\<user-name>\.m2\repository`
-    - These settings can be overridden in your IDE such as [IntelliJ](/Guides%20on%20How-to/IntelliJ.md)
-    - You can also override them in the `settings.xml` file in your Maven home directory
-    - For example, to override the local Maven repository to a centralized directory such as `C:\dev\maven-repository`
-      - Add the following to your `settings.xml` file in your Maven home directory: `<localRepository>C:\dev\maven-repository</localRepository>`
-      - Restart your IDE
-      - Maven will now use the centralized directory instead of the local one
-    - ~/.m2/repository is the default location for Maven to store artifacts and dependencies.
-      - Artifacts are the compiled code of your project.
-        - Artifacts are stored using information such as the artifact ID, version, and packaging type.
-        - This folder structure avoids name collisions between artifacts with the same ID and version.
-        - Duplication is avoided by using a hash of the artifact's contents as part of the filename.
-        - ```xml
-           <dependency>
-               <groupId>com.codealchemists</groupId>
-               <artifactId>coding-dojo</artifactId>
-               <version>1.0.0</version>
-               <packaging>ear</packaging>
-           </dependency>
-          ```
-      - Dependencies are the libraries that your project depends on.
-5. After setting up Maven, you can continue your repeatable builds with or without an IDE
-    - How to do it using [IntelliJ](Guides%20on%20How-to/IntelliJ.md)
-    - Working With Maven in IntelliJ: [IntelliJ IDEA Tutorial: Maven](https://www.jetbrains.com/help/idea/maven.html)
-    - [Working With Maven in IntelliJ IDEA](https://www.youtube.com/watch?v=pt3uB0sd5kY)
 
-- N.B. Maven version 3.9.9 has been used within IntelliJ under Windows 11.
-  At least Java SE 17 will be necessary as of Maven 4 (already part of this project).
-- It may be worthwhile to learn other build tools such as Gradle, Ant, or Bazel, but Maven is the most widely used build tool in the Java ecosystem.
-- [Gradle](https://gradle.org/) is a popular alternative to Maven, especially for Android development and other JVM languages like Kotlin. Gradle is YML-based and offers more flexibility in defining build scripts compared to Maven's XML-based POM files.
-- [Ant](https://ant.apache.org/) is an older build tool still used in some legacy projects, but it is less common in modern Java development.
-- [Bazel](https://bazel.build/) is a build tool developed by Google that is gaining popularity for its speed and scalability, especially in large projects.
+*The only way to decide the worth of any tutorial is to decide how well it teaches.*
 
-## 4—Docker: Containerize your Application
-### 4.1—[What is Docker](https://docs.docker.com/get-started/docker-overview/)?
 
-### 4.2—[Download and Install Docker](https://docs.docker.com/get-started/get-docker/)
+**Now, let's start your future-proof DevOps Engineering career**
+---
 
-## 5—IntelliJ: Java and Kotlin's goto Integrated Development Environment (IDE)
-### 5.1-[Download and Install IntelliJ](https://www.jetbrains.com/idea/download/)
-  - The Community Edition is completely free to use.
-  - The Ultimate Edition for Professional Software Development — free to try out for 30 days with it additional features.
-  - Suggestion to install IntelliJ into: `C:\dev\JetBrains\IntelliJ IDEA <version.number>\`
-- [Get started](https://www.jetbrains.com/help/idea/getting-started.html)
-- [Maven support](https://www.jetbrains.com/help/idea/maven-support.html)
-- [JetBrains AI](https://www.jetbrains.com/ai/) Assistant - Supercharge your tools. Embrace new freedom.
-- [IntelliJ on YouTube](https://www.youtube.com/@intellijidea)
-- [JetBrains on YouTube](https://www.youtube.com/@JetBrainsTV)
+## 🚀 Quick Start
+Don't wait. Get the code on your local machine right now.
 
-### 5.2-Bring it all together and set up shop with by configuring Java, Maven, and Git
-  - Set up Java in IntelliJ: `File` --> `Settings --> Build, Execution, Deployment` --> `Compiler` --> `Java Compiler`
-      Use the Java directory previously set up in the Maven home path such as: `C:\dev\Java\jdk-<version.number>`
-  - Set up Maven in IntelliJ: `File` --> `Settings` --> `Build, Execution, Deployment` --> `Build Tools` --> `Maven`
-      Use the Maven directory previously set up in the Maven home path such as: `C:\dev\apache-maven-<version.number>`
-      Do not use the Bundled version, unless you have a good reason to do so.
-  - A shortcut for opening you current Project Structure to change any setting quickly --> `CTRL + ALT + SHIFT + S`
-  - Learn IntelliJ's shortcuts. Access it from IntelliJ itself: `Help` --> `Keyboard Shortcuts PDF`
-### 5.3-Some strongly recommended Plugins
-  - `File` --> `Settings` --> `Plugins`
-      - [SonarQube](https://plugins.jetbrains.com/plugin/7973-sonarqube-for-ide/)
-      - [Cucumber](https://plugins.jetbrains.com/plugin/7212-cucumber-for-java/)
-      - [Gherkin](https://plugins.jetbrains.com/plugin/9164-gherkin/)
-      - [AI Assistant](https://plugins.jetbrains.com/plugin/22282-jetbrains-ai-assistant)
-      - There's a lot more out there! Check out the Plugins section in the Settings of IntelliJ
-### 5.4-Build Project vs. Rebuild Project
-  - `Build` --> `Build Project` is an incremental build that only builds what has changed—Skips over what has not changed
-  - `Build` --> `Rebuild Project` removes everything and rebuilds everything completely
-### Use any IDE to suit your personal preferences
-  - The Coding Dojo's intention is to work out the sources using an IDE agnostic approach. However, this Coding Dojo uses IntelliJ
-  - After setting up Java, Maven, and Git, continue programming from an IDE of your choice. 
-    - The following IDEs are also suitable for developing Java code in addition to IntelliJ
-    -  [Eclipse](https://eclipseide.org/)
-    -  [Netbeans](https://netbeans.apache.org/front/main/index.html)
-    -  [JDeveloper](https://www.oracle.com/nl/application-development/technologies/jdeveloper.html)
-    -  [BlueJ](https://www.bluej.org/)
-    -  [Visual Studio Code](https://code.visualstudio.com/)
-  - I'd recommend knowing at least one more IDE in addition to IntelliJ
+**1. Open your terminal.**
+**2. Clone this repository:**
 
-## 6-Agile, Scrum, and other frameworks to combine with
-As a Software or DevOps engineer, your most likely setup will be in a Scrum Team, so have a look at the following sources
-1. [The Agile Manifesto](https://agilemanifesto.org/) - available in multiple languages
-   - We are uncovering better ways of developing software by doing it and helping others do it.
-   Through this work we have come to value:
-   1. Individuals and interactions over processes and tools
-   2. Working software over comprehensive documentation
-   3. Customer collaboration  over contract negotiation
-   4. Responding to change over following a plan
-   That is, while there is value in the items on the right, we value the items on the left more.
-   [Principles Behind the Agile Manifesto](https://agilemanifesto.org/principles.html)  
-   
-2. [Click here](Guides%20on%20How-to/Agile,%20Scrum,%20Kanban%20and%20Lean%20Six%20Sigma%20References.md) for additional references about 
-   1. Agile
-   2. Scrum
-   3. Kanban
-   4. Lean Six Sigma
+`git clone [https://github.com/The-Code-Alchemist/Coding-Dojo/](https://github.com/The-Code-Alchemist/Coding-Dojo/)`
 
-## 7-Recommended courses and literature to keep going
-- Work in progress: here's [a preliminary overview](Guides%20on%20How-to/Books%20and%20Video%20Course%20Recommendations.md)
+*New to Git? See the [Git Guide](Guides%20on%20How-to/Git%20SCM.md).*
 
-## 8-Future Additions to the Coding Dojo
-- [An overview](Guides%20on%20How-to/Future%20Work.md) of upcoming tools and techniques 
+---
+
+## 🛠️ The Toolkit (Prerequisites)
+To work in this Dojo, you need four essential tools. Install them in this order:
+
+### 1. Java SE (The Language)
+You need the Java Development Kit (JDK) to write programs.
+*   **Download:** [Oracle JDK Downloads](https://www.oracle.com/nl/java/technologies/downloads/) (Recommended: JDK 17, 21 or 25 LTS).
+*   **Verify:** Open your terminal and run `java -version` and `javac -version`.
+*   **Alternatives:** [OpenJDK](https://openjdk.java.net/), [Azul Zulu](https://www.azul.com/downloads/zulu-community/).
+*   **[Java References](Guides%20on%20How-to/Java%20References.md)**
+
+### 2. Maven (The Builder)
+Maven builds your project and manages libraries (dependencies).
+*   **Download:** [Apache Maven](https://maven.apache.org/download.cgi).
+*   **Verify:** Open your terminal and run `mvn -v`. `mvn -version` or `mvn --version`
+*   **Alternatives:** [Gradle](https://gradle.org/), [Ant](https://ant.apache.org/), [SBT](https://www.scala-sbt.org/), [Bazel](https://bazel.build/).
+*   **[Maven Guide](Guides%20on%20How-to/Maven.md)**
+
+### 3. Git (The Time Machine)
+Git tracks changes to your code.
+*   **Download:** [Git SCM](https://git-scm.com/).
+*   **Verify:** Open your terminal and run `git -v`.
+*   **Useful tip:** Open a terminal in your IDE since most modern IDEs have a built-in terminal.
+*   **Alternatives:** [GitHub Desktop](https://desktop.github.com/), [SourceTree](https://www.sourcetreeapp.com/), [GitKraken](https://www.gitkraken.com/).
+* **[Git SCM Summary](Guides%20on%20How-to/Git%20SCM.md)**
+
+### 4. Docker (The Container)
+Docker containers package your application and all its dependencies into a standardized unit for software deployment.
+*   **Download:** [Docker Desktop](https://www.docker.com/products/docker-desktop).
+*   **Verify:** Open your terminal and run `docker --version`.
+*   **Alternatives:** [Podman](https://podman.io/), [LXC](https://linuxcontainers.org/), [LXC-Web-Panel](https://github.com/lxc/lxc-webpanel).
+*   **[Docker](Guides%20on%20How-to/Docker.md)**
+
+### 5. IntelliJ IDEA (The Workshop)
+This is the Integrated Development Environment (IDE) where you will write code.
+*   **Download:** [IntelliJ IDEA](https://www.jetbrains.com/idea/download/) (Community Edition is free).
+*   **Alternatives:** [VS Code](https://code.visualstudio.com/), [Eclipse](https://eclipseide.org/).
+*   **[IntelliJ IDEA](Guides%20on%20How-to/IntelliJ.md)**
+*The Community Edition is completely free to use.*
+*The Ultimate Edition for Professional Software Development — free to try out for 30 days with its additional features.*
+
+---
+
+## ⚙️ Setup & Best Practices
+*This repo works on any OS, but here is a "Pro Tip" setup for Windows users to keep things organized.*
+
+**Recommended Folder Structure:**
+Instead of installing tools in random "Program Files" folders, create a centralized `dev` folder:
+*   `C:\dev\Java\jdk-<version.number>`
+*   `C:\dev\apache-maven-<version.number>\`
+*   `C:\dev\git\`
+*   `C:\dev\JetBrains\IntelliJ IDEA <version.number>`
+*   `C:\dev\Docker\Docker Desktop`
+
+**Environment Variables:**
+1.  **JAVA_HOME:** Point to your JDK folder (e.g., `C:\dev\Java\jdk-<version.number>`).
+2.  **MAVEN_HOME:** Point to your Maven folder (e.g., `C:\dev\apache-maven-<version.number>`).
+3.  **PATH:** Add `%JAVA_HOME%\bin` and `%MAVEN_HOME%\bin` to your System `PATH`.
+
+**Configure IntelliJ:**
+1.  Open IntelliJ.
+2.  Go to **File > Settings > Build, Execution, Deployment > Build Tools > Maven**.
+3.  Point "Maven home path" to your installed `C:\dev\apache-maven...` folder (Try to avoid using the "Bundled" version).
+
+---
+
+## 📚 Reference Guides
+This repo contains detailed guides on the technologies you will use. Click the links below to dive deeper:
+
+*   **[Java References](Guides%20on%20How-to/Java%20References.md)** - Deep dive into JDK versions (8, 11, 17, 21, 25).
+*   **[Maven Guide](Guides%20on%20How-to/Maven.md)** - How to build, package, and manage dependencies.
+*   **[Git SCM](Guides%20on%20How-to/Git%20SCM.md)** - Version control basics.
+*   **[Docker](Guides%20on%20How-to/Docker.md)** - Containerize your applications.
+*   **[IntelliJ IDEA](Guides%20on%20How-to/IntelliJ.md)** - Shortcuts and setup tips.
+
+---
+
+## 🧠 The Software Engineering Mindset
+Coding is only part of the job. How you work matters.
+
+**Agile & Scrum**
+- Most modern teams work in "Sprints" using [Agile](https://agilemanifesto.org/) and [Scrum](https://scrum.org).
+- [Agile/Scrum References](Guides%20on%20How-to/Agile,%20Scrum,%20Kanban%20and%20Lean%20Six%20Sigma%20References.md)
+- [The Agile Manifesto](https://agilemanifesto.org/)
+  - We are uncovering better ways of developing software by doing it and helping others do it.
+      Through this work we have come to value:
+    - Individuals and interactions over processes and tools.
+    - Working software over comprehensive documentation.
+    - Customer collaboration over contract negotiation.
+    - Responding to change over following a plan.
+    - That is, while there is value in the items on the right, we value the items on the left more.
+- In addition to Agile and Scrum, Kanban and Lean Six Sigma can also be combined
+
+**Recommended Learning**
+*   [Books and Video Courses](Guides%20on%20How-to/Books%20and%20Video%20Course%20Recommendations.md)
+
+** Preliminary Overview of Future Additions to the Coding Dojo**
+*   [List of upcoming tools and techniques](Guides%20on%20How-to/Future%20Work.md)
+---
