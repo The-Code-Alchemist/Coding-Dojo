@@ -1,14 +1,22 @@
 # References regarding Agile, Scrum, Kanban, and Lean Six Sigma 
 ## Agile/Scrum
-- [An overview of Scrum Guides](https://scrumguides.org/index.html)
-- [Download your Scrum Guide here](https://scrumguides.org/scrum-guide.html)
-- [Scrum Homepage](https://scrum.org)
-- [Scrum Guide](https://scrum.org/resources/scrum-guide)
-- [Additional scrum.org resources](https://scrum.org/resources/)
-- [Agile Kata Pro](https://www.agilekata.pro/)
-- [Agile Coach: Let's find the right fit.](https://www.agilecoach.com/)
-- [Age of Product](https://age-of-product.com/)
-- [Venkat Subramaniam's Agile Developer](https://agiledeveloper.com/web)
+- [The Agile Manifesto](https://agilemanifesto.org/) is a [set of twelve principles](https://agilemanifesto.org/principles.html) that guide the way we work.
+  - Individuals and interactions over processes and tools.
+  - Working software over comprehensive documentation.
+  - Customer collaboration over contract negotiation.
+  - Responding to change over following a plan.
+  - That is, while there is value in the items on the right, we value the items on the left more.
+- [Scrum](https://scrum.org) is a framework for managing software development projects.
+- An overview of Scrum Guides and Resources
+  - [Scrum Guides](https://scrumguides.org/index.html)
+  - [Download your Scrum Guide here](https://scrumguides.org/scrum-guide.html)
+  - [Scrum Guide](https://scrum.org/resources/scrum-guide)
+  - [Additional scrum.org resources](https://scrum.org/resources/)
+- More Agile/Scrum Resources
+  - [Agile Kata Pro](https://www.agilekata.pro/)
+  - [Agile Coach: Let's find the right fit.](https://www.agilecoach.com/)
+  - [Age of Product](https://age-of-product.com/)
+  - [Venkat Subramaniam's Agile Developer](https://agiledeveloper.com/web)
  
 ## Nexus
 - [Nexus Guide](https://scrum.org/resources/nexus-guide)
@@ -17,7 +25,8 @@
 - [Kanban Guide](https://scrum.org/resources/kanban-guide-scrum-teams)
 
 ## Lean Six Sigma
-- References to be added soon
+- [The Council for Six Sigma Certification](https://www.sixsigmacouncil.org/)
+- [Lean Six Sigma](https://www.sixsigmacertification.com/)
 
 ## DevOps
 - [DevOps](https://devops.com/) is a combination of development and operations practices that aims to shorten the software development lifecycle and deliver high-quality software continuously.
