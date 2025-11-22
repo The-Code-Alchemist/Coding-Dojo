@@ -23,10 +23,11 @@
 ## 🚀 Quick Start
 Don't wait. Get the code on your local machine right now.
 
-**1. Open your terminal.**
-**2. Clone this repository:**
-
-`git clone [https://github.com/The-Code-Alchemist/Coding-Dojo/](https://github.com/The-Code-Alchemist/Coding-Dojo/)`
+*   **1. Open your terminal.**
+*   **2. Clone this repository:**
+    ```bash 
+    git clone https://github.com/The-Code-Alchemist/Coding-Dojo/
+    ```
 
 *New to Git? See the [Git Guide](Guides%20on%20How-to/Git%20SCM.md).*
 
