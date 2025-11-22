@@ -1,9 +1,44 @@
 # Git SCM Summary and Shortcuts
+
+## [Git Basics](https://www.youtube.com/watch?v=SWYqp7iY_Tc)
+## [Git and GitHub](https://www.youtube.com/watch?v=SWYqp7iY_Tc)
+
+## Previous notes 
+
+1. Setup
+### `git config --global user.name “Your Name”` 
+### `git config --global user.email “your.name@your-email.com”`
+- `git config` gives an overview of available options
+- Run `git config --list`to check your set Git configuration options
+- `code .` to enter your IDE
+
+3. Clone the [Coding Dojo Git repository](https://github.com/The-Code-Alchemist/Coding-Dojo/) from GitHub to get started
+   ### Click on the URL to see it on GitHub
+   ### Or clone directly from the command-line `git clone https://github.com/The-Code-Alchemist/Coding-Dojo/`
+4. Create a Markdown file using the `touch Example.md` command.
+    - This will come in handy for explanation purposes.
+5. Git will start tracking changes of any folder when you use the command `git init` on it
+6. `git status` shows the changes and whether these changes have been staged or not
+7. `git add .` adds all the changes from the working directory to the staging area.
+    - `git status` will show a different color indicating the changes are in the staging area.
+8. `git commit -m 'Changes saved locally'` stores the changes locally
+    - the `-m` flag attaches a message to your commit
+9. `git push` stores the changes in the remote repository as well
+10. GitHub's' page: [What is Git? Our beginner’s guide to version control](https://github.blog/developer-skills/programming-languages-and-frameworks/what-is-git-our-beginners-guide-to-version-control/)
+11. [Git, GitHub and Gitlab References](Guides%20on%20How-to/Git%20SCM.md)
+    - My own summary is based on the most frequently used commands and some definitions.
+      N.B. Never commit the following to your Git repository to keep it clean and safe:
+    - Never commit any IDE or machine-specific settings such as `.idea/` or `.vscode/` directories. Add these to your `.gitignore` file if they're not there already.
+    - Never commit any sensitive information such as passwords, API keys, or personal data to a public repository.
+
+
+
+
 ##  [A brief introduction to Git for beginners | Kedasha Kerr for GitHub](https://www.youtube.com/watch?v=r8jQ9hVA2qs)
    -  A version control is a system that tracks changes to files over a period of time. 
-     - Git is the most widely used version control system today (industry standard)
+     — Git is the most widely used version control system today (industry standard)
    1. The working directory is where you make changes to your files such as a workspace.
-     - Holds the current state of your project
+     — Holds the current state of your project
    2. The staging area or index is where you prepare your changes before committing them. 
       -  Think of it a draft space that allows you to review and adjust the changes before they become part of the project's history.
         - In other words, where the changes are not definitive yet
@@ -15,7 +50,7 @@
    5. Branches are parallel versions of your project where you can work on different features or fixes independently without affecting the main project.
       - until you're ready to merge back into them.
    6. A Pull Request (PR) is a way to propose changes from one branch to another.
-      - A request to review, discuss and possibly merge the changes into the target branch
+      - A request to review, discuss, and possibly merge the changes into the target branch
         - Often used in team collaborations
    7. Merging is the process of integrating changes from one branch into another.
       -  It combines the histories of both branches which creates a single, unified history
