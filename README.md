@@ -14,7 +14,7 @@
 - See it all in action to consolidate your knowledge and skills in a real-world setting.
 
 
-*The only way to decide the worth of any tutorial is to decide how well it teaches.*
+> *The only way to decide the worth of any tutorial is to decide how well it teaches.*
 
 
 **Now, let's start your future-proof DevOps Engineering career**

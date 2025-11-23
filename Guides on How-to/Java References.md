@@ -1,12 +1,16 @@
 # JRE, JDK, and JVM
 1. JDK (Java Development Kit) is a software development kit used to develop Java applications. It includes the JRE (Java Runtime Environment), which is necessary to run Java applications, as well as development tools such as the Java compiler (`javac`), debugger, and other utilities.
-   - Typically, the JDK is used by developers to write, compile, and debug Java code. It is available for various platforms, including Windows, macOS, and Linux.
-   - Oracle provides the official JDK, but there are also open-source alternatives like [OpenJDK](https://openjdk.org/).
-   - Open source JDKs are available from various vendors, such as [AdoptOpenJDK](https://adoptopenjdk.net/releases.html), [Amazon Corretto](https://aws.amazon.com/corretto/), [Azul Zulu](https://www.azul.com/downloads), and others.
+    - Typically, the JDK is used by developers to write, compile, and debug Java code. It is available for various platforms, including Windows, macOS, and Linux.
+    - Oracle provides the official JDK, but there are also open-source alternatives like [OpenJDK](https://openjdk.org/).
+    - Open source JDKs are available from various vendors, such as [AdoptOpenJDK](https://adoptopenjdk.net/releases.html), [Amazon Corretto](https://aws.amazon.com/corretto/), [Azul Zulu](https://www.azul.com/downloads), and others.
 2. JRE (Java Runtime Environment) is a part of the JDK that provides the libraries, Java Virtual Machine (JVM), and other components necessary to run Java applications. 
-   - It does not include development tools like the compiler.
+    - It does not include development tools like the compiler.
 3. JVM (Java Virtual Machine) is an abstract machine that enables a computer to run Java programs. It interprets compiled Java bytecode and executes it on the host machine in a platform-independent manner.
-   - The JVM itself is platform-dependent, but the Java bytecode can run on any device that has a compatible JVM implementation.
+    - The JVM itself is platform-dependent, but the Java bytecode can run on any device that has a compatible JVM implementation.
+## Java Standard Edition (SE)—A programming language for writing your programs
+   - Oracle has multiple LTS versions of Java SE available: 8, 11, 17, 21, 25 (upcoming), and beyond. [Download a JDK of your choice here](https://www.oracle.com/nl/java/technologies/downloads/)     
+     "free to use in production and free to redistribute, at no cost, under the [Oracle No-Fee Terms and Conditions](https://www.oracle.com/downloads/licenses/no-fee-license.html)"
+   - Here's an overview of [Java Tutorials](https://docs.oracle.com/javase/tutorial/)
 
 # Compiling and Running Java Code
 1. To compile a Java program, you can use the `javac` command followed by the name of the Java file. For example:
@@ -19,8 +23,8 @@
    java MyProgram
    ```
 # Comments in Java
-- Java supports three types of comments that can be used to annotate code, explain logic, or provide documentation. 
-- Comments are ignored by the compiler and do not affect the execution of the program.
+   - Java supports three types of comments that can be used to annotate code, explain logic, or provide documentation. 
+   - Comments are ignored by the compiler and do not affect the execution of the program.
 1. Single-line comments start with `//` and continue to the end of the line.
    ```java
    // This is a single-line comment
@@ -56,17 +60,24 @@ N.B. Sometimes code gets commented out using `//` or `/* ... */` to temporarily 
     ```java
         import com.example.myapp.MyClass;
     ```
-- Uniqueness of package names is important to avoid conflicts, especially when using third-party libraries. It is common to use a reverse domain name as the package name, such as `com.example.myapp`, to ensure uniqueness.
+- Uniqueness of package names is important to avoid conflicts, especially when using third-party libraries. 
+  - It is common to use a reverse domain name as the package name, such as `com.example.myapp`, to ensure uniqueness.
 
     
-# Java References
-## External sources
+# Java References: External sources
 1. [The Java SE API documentation can serve as a reference (multiple versions available)](https://www.oracle.com/java/technologies/java-se-api-doc.html)
 2. [Oracle Java SE Support Roadmap](https://www.oracle.com/java/technologies/java-se-support-roadmap.html)
-3. [Java Language and Virtual Machine Specifications](https://docs.oracle.com/javase/specs/) Currently Java SE 17
-   - [The Java® Language Specification Java SE 17 Edition](https://docs.oracle.com/javase/specs/jls/se17/jls17.pdf)
-   - [The Java® Virtual Machine Specification Java SE 17 Edition](https://docs.oracle.com/javase/specs/jvms/se17/jvms17.pdf)
+3. [Java Language and Virtual Machine Specifications](https://docs.oracle.com/javase/specs/) Latest LTS version is Java SE 25.
+   - [The Java® Language Specification Java SE 25 Edition](https://docs.oracle.com/javase/specs/jls/se25/jls25.pdf)
+   - [The Java® Virtual Machine Specification Java SE 25 Edition](https://docs.oracle.com/javase/specs/jvms/se25/jvms25.pdf)
 4. [Java Platform, SE Documentation](https://docs.oracle.com/en/java/javase/)
+   - [Java Platform Standard Edition 8 Documentation](https://docs.oracle.com/javase/8/docs/)
+     - [Java Platform, Standard Edition (Java SE) 8 ](https://docs.oracle.com/javase/8/index.html)
+     - [JDK 8 Documentation](https://docs.oracle.com/javase/8/docs/technotes/guides/index.html)
+   - [JDK 11 Documentation](https://docs.oracle.com/en/java/javase/11/)
+   - [JDK 17 Documentation](https://docs.oracle.com/en/java/javase/17/)
+   - [JDK 21 Documentation](https://docs.oracle.com/en/java/javase/21/)
+   - [JDK 25 Documentation](https://docs.oracle.com/en/java/javase/25/)
 5. [Java SE White Papers](https://www.oracle.com/java/technologies/javase/javase-whitepapers.html)
 6. Check out Java on [YouTube](https://www.youtube.com/@java) where new releases and celebrations are shown live.
 7. [Java Champion Program](https://dev.java/community/jcs/)
