@@ -5,18 +5,20 @@
 
 	<groupId>com.codealchemists</groupId>
 	<artifactId>coding-dojo</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<properties>
 		<maven.compiler.source>17</maven.compiler.source>
 		<junit.version>6.0.0</junit.version>
+        <!-- build is platform-dependent without the UTF-8 encoding -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<cucumber-java.version>7.23.0</cucumber-java.version>
 		<testng.version>7.10.2</testng.version>
 	</properties>
 
 	<!-- add modules of the Coding Dojo here
+	Transitive dependencies are managed here
 	<modules>
 		<module></module>
 	</modules>
@@ -28,12 +30,17 @@
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
-                <version>3.17.0</version>
+                <version>3.20.0</version>
             </dependency>
             <dependency>
                 <groupId>org.apache</groupId>
                 <artifactId>apache</artifactId>
                 <version>35</version>
+            </dependency>
+            <dependency>
+                <groupId>org.hibernate.orm</groupId>
+                <artifactId>hibernate-core</artifactId>
+                <version>6.6.33.Final</version>
             </dependency>
 
             <!-- Testing -->
@@ -41,7 +48,7 @@
 			<dependency>
 				<groupId>org.junit</groupId>
 				<artifactId>junit-bom</artifactId>
-				<version>${junit.version}</version>
+				<version>6.0.0</version>
 				<scope>test</scope>
 				<type>pom</type>
 			</dependency>
