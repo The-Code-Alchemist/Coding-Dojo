@@ -3,7 +3,8 @@
     - Typically, the JDK is used by developers to write, compile, and debug Java code. It is available for various platforms, including Windows, macOS, and Linux.
     - Oracle provides the official JDK, but there are also open-source alternatives like [OpenJDK](https://openjdk.org/).
     - Open source JDKs are available from various vendors, such as [AdoptOpenJDK](https://adoptopenjdk.net/releases.html), [Amazon Corretto](https://aws.amazon.com/corretto/), [Azul Zulu](https://www.azul.com/downloads), and others.
-2. JRE (Java Runtime Environment) is a part of the JDK that provides the libraries, Java Virtual Machine (JVM), and other components necessary to run Java applications. 
+    - OpenJDK package versions from [Repology.org](https://repology.org/project/openjdk/versions)
+2. JRE (Java Runtime Environment) is a part of the JDK that provides the libraries, Java Virtual Machine (JVM), and other parts necessary to run Java applications. 
     - It does not include development tools like the compiler.
 3. JVM (Java Virtual Machine) is an abstract machine that enables a computer to run Java programs. It interprets compiled Java bytecode and executes it on the host machine in a platform-independent manner.
     - The JVM itself is platform-dependent, but the Java bytecode can run on any device that has a compatible JVM implementation.
@@ -90,6 +91,9 @@ N.B. Sometimes code gets commented out using `//` or `/* ... */` to temporarily 
 
 # Java Frameworks
 1. [Jakarta EE](https://jakarta.ee/)
+   - [Jakarta EE Specifications](https://jakarta.ee/specifications/)
+   - [Eclipse Starter for Jakarta EE](https://start.jakarta.ee/)
+   - [Jakarta EE Compatible Products](https://jakarta.ee/compatibility/)
    - [Payara](https://www.youtube.com/@PayaraFish) 
    - [Mastering Java Message Service: A Jakarta EE Developer's Guide](https://www.youtube.com/watch?v=QypMHZHbBkI)
    - N.B. Java EE 8 was Oracle's last release of the Java EE platform, which was then transferred to the Eclipse Foundation and renamed to Jakarta EE.
@@ -106,3 +110,7 @@ N.B. Sometimes code gets commented out using `//` or `/* ... */` to temporarily 
 4. [Vert.x](https://vertx.io/)
    - [Vert.x by Example](https://vertx.io/docs/vertx-examples/java/)
 5. [Micronaut](https://micronaut.io/)
+
+# External Links
+1. [Java Specialists](https://www.javaspecialists.eu/)
+2. [Baeldung](https://www.baeldung.com/)

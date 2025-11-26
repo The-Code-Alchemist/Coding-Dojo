@@ -22,7 +22,10 @@ It defines **who you are** using three coordinates:
 *   **ArtifactId:** The name of your project (e.g., `my-app`).
 *   **Version:** The current version (e.g., `1.0-SNAPSHOT`).
     *   *Tip:* `SNAPSHOT` means "work in progress." Never deploy a snapshot to production.
-
+*   **Effective POM:** The combination of your `pom.xml` and the default settings from Maven.
+    *   A complete POM that has all the inherited settings from settings.xml, Maven itself, plugins, and anything you define yourself.*
+    *   Essentially what Maven runs inside your application.
+    *   Add an example later
 ---
 
 ## 2. How to Create a Project (IntelliJ IDEA)
@@ -52,6 +55,7 @@ Inside the `<dependencies>` section of your POM file, add the library's coordina
     </dependency>
 </dependencies>
 ```
+*   **IntellJ's shortcut for adding a dependency is `Ctrl + Shift + A`.
 Dependencies are the libraries that your project depends on.
 
 **Key Concepts:**
@@ -63,23 +67,35 @@ Dependencies are the libraries that your project depends on.
 
 ---
 
-## 4. Essential Maven Commands
+## 4. Essential Maven Commands/Goals
 You run these commands to tell Maven what to do with your project. You can run these from the terminal or the "Maven" tab in IntelliJ.
 
-| Command | What it does                                                                                                                    |
-| :--- |:--------------------------------------------------------------------------------------------------------------------------------|
-| `mvn clean` | **Housekeeping.** Deletes the `target` folder (where compiled files live) to ensure a fresh build.                              |
-| `mvn compile` | **Translation.** Turns your `.java` source code into `.class` files.                                                            |
-| `mvn test` | **Verification.** Runs all unit tests found in `src/test/java`.                                                                 |
-| `mvn package` | **Boxing up.** Compiles code, runs tests, and packages the result into a JAR or WAR file.                                       |
-| `mvn install` | **Local Sharing.** Packages the project and puts it in your local repository (`.m2` folder) so other local projects can use it. |
-| `mvn deploy` | **Publishing.** Uploads your artifact to a remote server (like a corporate repository) for others to use.                       |
+| Command                | What it does                                                                                                                    |
+|:-----------------------|:--------------------------------------------------------------------------------------------------------------------------------|
+| `mvn clean`            | **Housekeeping.** Deletes the `target` folder (where compiled files live) to ensure a fresh build.                              |
+| `mvn validate`         | **Validation.** Checks the project is set up correctly and all necessary files are present.                                     |
+| `mvn compile`          | **Translation.** Turns your `.java` source code into `.class` files.                                                            |
+| `mvn test`             | **Verification.** Runs all unit tests found in `src/test/java`.                                                                 |
+| `mvn test-compile`     | **Verification.** Compiles all unit tests found in `src/test/java`.                                                             |
+| `mvn integration-test` | **Verification.** Runs integration tests (tests that involve multiple components or systems).                                   |
+| `mvn site:stage`       | **Verification.** Runs all unit tests found in `src/test/java` and generates a report in `target/site/staging`.                 |
+| `mvn site`             | **Documentation.** Generates documentation for your project (e.g., Javadocs).                                                   |
+| `mvn site:deploy`      | **Publishing.** Generates documentation and deploys it to a remote server (like GitHub Pages).                                  |
+| `mvn verify`           | **Verification.** Runs all verification phases (test, integration-test, site) and ensures the build is ready for deployment.    |
+| `mvn package`          | **Boxing up.** Compiles code, runs tests, and packages the result into a JAR or WAR file.                                       |
+| `mvn install`          | **Local Sharing.** Packages the project and puts it in your local repository (`.m2` folder) so other local projects can use it. |
+| `mvn javadoc:jar`      | **Documentation.** Generates Javadocs for your project and packages them into a JAR file.                                       |
+| `mvn javadoc:javadoc`  | **Documentation.** Generates Javadocs for your project                                                                          |
+| `mvn deploy`           | **Publishing.** Uploads your artifact to a remote server (like a corporate repository) for others to use.                       |
 
-### The "Pro" Workflow: Daisy Chaining
+### The "Pro" Workflow: Daisy-Chaining
 You rarely run just one command. It is common practice to chain them to ensure a safe build.
 
-**The most common command used by developers:**
+**The most common daisy-chain commands used by developers:**
 > `mvn clean install`
+> `mvn clean verify`
+Refine this daisy-chain command: -P test means the test profile will run
+> `mvn clean validate compile test test-compile package -P test`
 
 This deletes old files (`clean`), compiles the code, runs the tests, packages the JAR, and saves it to your local machine (`install`).
 
