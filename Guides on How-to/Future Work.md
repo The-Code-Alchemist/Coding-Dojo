@@ -14,9 +14,9 @@
     2. [GitLab](https://gitlab.com)
     3. [Bitbucket](https://bitbucket.org/)
 4. Containerize
-    2. [Kubernetes](https://kubernetes.io/)
+    1. [Kubernetes](https://kubernetes.io/)
         - [Kube by example](https://kubebyexample.com/)
-    3. [OpenShift](https://www.redhat.com/en/technologies/cloud-computing/openshift)
+    2. [OpenShift](https://www.redhat.com/en/technologies/cloud-computing/openshift)
 
 5. Code Quality
     1. [SonarQube](https://www.sonarsource.com/products/sonarqube/)
