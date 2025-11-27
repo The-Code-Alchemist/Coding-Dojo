@@ -18,6 +18,9 @@
     -  [JDeveloper](https://www.oracle.com/nl/application-development/technologies/jdeveloper.html)
     -  [BlueJ](https://www.bluej.org/)
     -  [Visual Studio Code](https://code.visualstudio.com/)
+    -  [Atom](https://atom.io/)
+    -  [Windsurf](https://www.windsurfing.com/)
     -  There's a lot more out there!
-- I'd recommend knowing at least one more IDE in addition to IntelliJ. 
+- I'd recommend knowing at least one more IDE in addition to IntelliJ.
   - That way you can see how other major IDEs work and approach software development differently.
+  -
