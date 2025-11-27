@@ -1,0 +1,83 @@
+# Git files
+.git
+.gitignore
+.gitattributes
+
+# IDE files
+.idea
+*.iml
+.vscode
+.eclipse
+.classpath
+.project
+.settings/
+
+# Build outputs
+target/
+*.jar
+*.war
+build/
+out/
+*.class
+
+# Logs
+logs/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Docker files (don't copy Docker configs into image)
+Dockerfile*
+docker-compose*.yml
+.dockerignore
+
+# Documentation
+*.md
+docs/
+
+# Test files (already excluded in multi-stage build)
+src/test/
+
+# Maven wrapper (optional - keep if you want to use mvnw in container)
+.mvn/wrapper/maven-wrapper.jar
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~
+
+# Environment files, Secrets and credentials
+.env
+.env.*
+.env.local
+.env.production
+*.key
+*.pem
+secrets.yml
+application-secrets.properties
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+Jenkinsfile
+
+# Kubernetes
+k8s/
+*.yaml
+
+# Other
+README*
+LICENSE
+CONTRIBUTING*
+
+# Local configuration
+application-local.yml
+config-local.json
+
+# IDE-specific settings (personal preferences)
+.idea/workspace.xml
+.idea/tasks.xml
+.vscode/settings.json (optional - team may share this)
