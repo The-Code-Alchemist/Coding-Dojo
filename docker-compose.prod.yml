@@ -1,0 +1,147 @@
+# Production Docker Compose Configuration
+# Usage: docker-compose -f docker-compose.prod.yml up -d
+
+version: '3.8'
+
+services:
+  # Main application service (production)
+  coding-dojo-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - BUILD_DATE=${BUILD_DATE:-$(date -u +"%Y-%m-%dT%H:%M:%SZ")}
+        - VCS_REF=${VCS_REF:-$(git rev-parse --short HEAD)}
+    image: coding-dojo:${VERSION:-1.0.1-SNAPSHOT}
+    container_name: coding-dojo-prod
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+      - JAVA_OPTS=-Xms512m -Xmx1024m -XX:+UseG1GC -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/app/logs/heap_dump.hprof
+      - DATABASE_URL=jdbc:postgresql://postgres:5432/coding_dojo
+      - DATABASE_USERNAME=dojo_user
+      - DATABASE_PASSWORD=${DB_PASSWORD}
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    volumes:
+      - app-logs:/app/logs
+    networks:
+      - coding-dojo-network
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 1536M
+        reservations:
+          cpus: '1'
+          memory: 512M
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8080/actuator/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # PostgreSQL database (production)
+  postgres:
+    image: postgres:16-alpine
+    container_name: coding-dojo-postgres-prod
+    environment:
+      POSTGRES_DB: coding_dojo
+      POSTGRES_USER: dojo_user
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_INITDB_ARGS: "--encoding=UTF8 --locale=en_US.UTF-8"
+    volumes:
+      - postgres-data-prod:/var/lib/postgresql/data
+      - ./docker/init-scripts:/docker-entrypoint-initdb.d:ro
+      - ./docker/backups:/backups
+    networks:
+      - coding-dojo-network
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 512M
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U dojo_user -d coding_dojo"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # Redis cache (production)
+  redis:
+    image: redis:7-alpine
+    container_name: coding-dojo-redis-prod
+    command: redis-server --appendonly yes --requirepass ${REDIS_PASSWORD}
+    volumes:
+      - redis-data-prod:/data
+    networks:
+      - coding-dojo-network
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+    healthcheck:
+      test: ["CMD", "redis-cli", "--raw", "incr", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # Nginx reverse proxy (production only)
+  nginx:
+    image: nginx:alpine
+    container_name: coding-dojo-nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./docker/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./docker/nginx/ssl:/etc/nginx/ssl:ro
+    networks:
+      - coding-dojo-network
+    depends_on:
+      - coding-dojo-app
+    restart: always
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+networks:
+  coding-dojo-network:
+    driver: bridge
+    name: coding-dojo-prod-net
+
+volumes:
+  postgres-data-prod:
+    name: coding-dojo-postgres-prod-data
+  redis-data-prod:
+    name: coding-dojo-redis-prod-data
+  app-logs:
+    name: coding-dojo-app-logs
