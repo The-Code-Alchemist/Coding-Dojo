@@ -25,7 +25,6 @@ It defines **who you are** using three coordinates:
 *   **Effective POM:** The combination of your `pom.xml` and the default settings from Maven.
     *   A complete POM that has all the inherited settings from settings.xml, Maven itself, plugins, and anything you define yourself.*
     *   Essentially what Maven runs inside your application.
-    *   Add an example later
 ---
 
 ## 2. How to Create a Project (IntelliJ IDEA)
@@ -107,18 +106,48 @@ This deletes old files (`clean`), compiles the code, runs the tests, packages th
 
 ## 5. Troubleshooting
 *   **Dependency Tree:** If you have conflicts, run `mvn dependency:tree` to see exactly which libraries are pulling in which transitive dependencies.
-*   **Repositories:** Maven downloads files from the internet (Central Repository) to your computer. 
-* It stores them in a local folder (usually `~/.m2/repository`). 
+*   **Repositories:** Maven downloads files from the internet (Central Repository) to your computer.
+* It stores them in a local folder (usually `~/.m2/repository`).
 * `~/.m2/repository` is the default location for Maven to store artifacts and dependencies.
 * Artifacts are the compiled code of your project.
 * If a download fails, checking this folder or your internet connection is a good first step.
 
-## 6. Overriding
+## 6. BOM — Bill of Materials
+*   A **Bill Of Materials (BOM)** is a special kind of POM file that is used to control the versions of a project's multiple related dependencies.
+*   It provides a centralized place to define and update version numbers, ensuring that all modules in a project use compatible versions of libraries.
+*   Why use a BOM? — For version management, consistency, and simplification
+* **Key benefits:**
+- **Centralized Versioning**: Define versions in one place.
+- **Consistency**: Ensures all modules use the same library versions.
+- **Simplified Maintenance**: Upgrading a dependency requires changing the version in only one file.
+
+**Usage example:**
+To use a BOM, you import it in the `<dependencyManagement>` section of your `pom.xml`.
+
+```xml
+<dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-dependencies</artifactId>
+            <version>3.2.0</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
+```
+
+## 7. Overriding Maven Settings
+*   `settings.xml` is a file that stores Maven settings.
+*   It is usually located in `~/.m2/settings.xml`.
+*   You can override settings in this file.
 *   Example of a local repository`C:\Users\<user-name>\.m2\repository` that can be overridden.
 *   These settings can be overridden in your IDE such as [IntelliJ](/Guides%20on%20How-to/IntelliJ.md)
 *   You can also override settings in your `pom.xml` file or in your `.m2/settings.xml` file.
 
-## External Resources
+## 8. External Resources
 *   [Maven | IntelliJ IDEA Documentation](https://www.jetbrains.com/help/idea/maven.html)
 *   [Working With Maven in IntelliJ IDEA](https://www.youtube.com/watch?v=pt3uB0sd5kY)
+*   [Maven Fundamentals on Pluralsight](https://www.pluralsight.com/courses/maven-fundamentals)
 
