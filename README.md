@@ -1,4 +1,7 @@
 # Coding Dojo 🥋
+> This repository is maintained by **Code Alchemists**
+> Learn more about our philosophy, training approach, and professional standards at
+> 👉 https://code-alchemists.com
 
 **Welcome to your training ground**
 
@@ -34,6 +37,7 @@ Don't wait. Get the code on your local machine right now.
 ---
 
 ## 🎯 Industry Baseline for Professional Software Engineering
+### A foundation built on proven standards, not hype
 
 The Coding Dojo is not a bootcamp, certification program, or framework tutorial.
 
@@ -86,7 +90,7 @@ By working through this Dojo, you build:
 - Practical understanding of how software moves from code to runtime
 - A portfolio that can be evaluated by engineers, not marketers
 
-This is the baseline expected from professional software engineers.
+This is the baseline we expect from professional software engineers.
 
 
 ---
@@ -188,4 +192,12 @@ Coding is only part of the job. How you work matters.
 
 ** Preliminary Overview of Future Additions to the Coding Dojo**
 *   [List of upcoming tools and techniques](Guides%20on%20How-to/Future%20Work.md)
+---
+
+## For Companies
+
+This Dojo is also used as a professional baseline
+by companies and consulting organizations.
+
+See: [For Companies](Guides%20on%20How-to/For%20Companies.md)
 ---
