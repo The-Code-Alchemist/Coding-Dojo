@@ -6,10 +6,26 @@
 	<groupId>com.codealchemists</groupId>
 	<artifactId>coding-dojo</artifactId>
 	<version>1.0.1-SNAPSHOT</version>
+    <modules>
+        <!-- add modules of the Coding Dojo here
+        Transitive dependencies are managed from here
+
+        <module>Jakarta EE</module>
+        <module>Spring Boot</module>
+        <module>Quarkus</module>
+        <module>Micronaut</module>
+
+        -->
+
+        <!-- Example only: subject to change
+               -->
+        <module>child-module-example</module>
+        <module>child-module-dependency</module>
+    </modules>
 	<packaging>pom</packaging>
 
 	<properties>
-		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.source>21</maven.compiler.source>
 		<junit.version>6.0.0</junit.version>
         <!-- build is platform-dependent without the UTF-8 encoding -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -17,16 +33,66 @@
 		<testng.version>7.10.2</testng.version>
 	</properties>
 
-	<!-- add modules of the Coding Dojo here
-	Transitive dependencies are managed here
-	<modules>
-		<module></module>
-	</modules>
-	-->
+    <!--  Key Benefits of adding a <repositories> Section
+        - Access to Non-Central Artifacts - Allows you to pull dependencies from repositories other than Maven Central
+revise      - such as custom plugin repositories, corporate repositories, or early-access plugin releases (e.g., JBoss, Spring, company-internal repositories, or snapshot repositories)
+        - Custom/Private Repository Support - Essential when using proprietary libraries hosted in your organization's private Maven repository (like Nexus or Artifactory)
+revise      - Custom/Internal Plugins - Essential when your organization develops proprietary Maven plugins hosted in private repositories (Nexus, Artifactory, etc.)
+        - Snapshot Dependencies - Enables downloading snapshot versions of dependencies that are typically hosted in separate snapshot repositories
+revise      Snapshot Plugin Versions - Enables using snapshot versions of plugins that are typically hosted in separate snapshot repositories for testing or development
+        - Early Access to New Releases - Some organizations publish early (Beta) releases or pre-release versions to their own repositories before they reach Maven Central
+revise            - Basically provides a way to access cutting-edge versions of libraries before they are officially released
+        - Fallback Options - Provides alternative sources if Maven Central is unavailable or doesn't host a specific artifact
+    -->
+    <repositories>
+        <repository>
+            <id>central</id>
+            <name>Maven Central Repository</name>
+            <url>https://repo.maven.apache.org/maven2</url>
+        </repository>
+        <repository>
+            <id>spring</id>
+            <name>Spring Repository</name>
+            <url>https://repo.spring.io/libs-release</url>
+        </repository>
+        <repository>
+            <id>jboss-public</id>
+            <name>JBoss Public Repository</name>
+            <url>https://repository.jboss.org/nexus/content/groups/public/</url>
+        </repository>
+    </repositories>
+
+    <!--
+        -
+        -
+    -->
+    <pluginRepositories>
+        <pluginRepository>
+            <id>central</id>
+            <name>Maven Plugin Repository</name>
+            <url>https://repo1.maven.org/maven2/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+    <!--
+      Difference from <repositories>
+      <repositories> - For downloading dependencies (libraries your code uses)
+      <pluginRepositories> - For downloading Maven plugins (build tools, not runtime dependencies)
+
+        Only add it if you need:
+        - Custom internal plugins
+        - Snapshot versions of plugins
+        - Plugins from specialized repositories
+        Adding unnecessary plugin repositories can slow down your build process.
+    -->
 
 	<dependencyManagement>
 		<dependencies>
-
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
@@ -41,6 +107,23 @@
                 <groupId>org.hibernate.orm</groupId>
                 <artifactId>hibernate-core</artifactId>
                 <version>6.6.33.Final</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-parent</artifactId>
+                <version>3.2.12</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-jdbc</artifactId>
+                <version>6.2.12</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>1.7.36</version>
             </dependency>
 
             <!-- Testing -->
@@ -77,17 +160,112 @@
 				<artifactId>apache-jmeter</artifactId>
 				<version>5.6.3</version>
 			</dependency>
-
 		</dependencies>
 	</dependencyManagement>
 
-	<build>
+    <profiles>
+        <!-- Profiles for various environments: all profiles appear in Maven overview -->
+        <!-- add .properties files to src/main/resources such as logging.properties      -->
+        <profile>
+            <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <build>
+                <resources>
+                    <resource>
+                        <directory>src/main/resources/dev</directory>
+                    </resource>
+                </resources>
+            </build>
+        </profile>
+        <profile>
+            <id>test</id>
+            <build>
+                <resources>
+                    <resource>
+                        <directory>src/main/resources/test</directory>
+                    </resource>
+                </resources>
+            </build>
+        </profile>
+        <profile>
+            <id>acc</id>
+            <build>
+                <resources>
+                    <resource>
+                        <directory>src/main/resources/acc</directory>
+                    </resource>
+                </resources>
+            </build>
+        </profile>
+        <profile>
+            <id>prod</id>
+            <build>
+                <resources>
+                    <resource>
+                        <directory>src/main/resources/prod</directory>
+                    </resource>
+                </resources>
+            </build>
+        </profile>
+    </profiles>
+
+    <build>
 		<plugins>
+            <!-- Refactoring -->
+            <!-- OpenRewrite -->
+            <plugin>
+                <groupId>org.openrewrite.maven</groupId>
+                <artifactId>rewrite-maven-plugin</artifactId>
+                <version>6.24.0</version>
+            </plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>3.5.4</version>
 			</plugin>
-		</plugins>
-	</build>
+            <plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.14.1</version>
+                <configuration>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.source}</target>
+                    <release>${maven.compiler.source}</release>
+                </configuration>
+			</plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.2.1</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                        <phase>install</phase>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.4.1</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.5.0</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                        <phase>install</phase>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
