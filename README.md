@@ -15,7 +15,7 @@
 - Expect updates to these tools as they become available.
 - Get comfortable with sizable code bases, since you will be working with them regularly professionally.
 - See it all in action to consolidate your knowledge and skills in a real-world setting.
-
+![Coding Dojo.png](Coding%20Dojo.png)
 
 > *The only way to decide the worth of any tutorial is to decide how well it teaches.*
 
