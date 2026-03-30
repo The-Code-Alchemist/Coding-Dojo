@@ -16,11 +16,6 @@
         <module>Micronaut</module>
 
         -->
-
-        <!-- Example only: subject to change
-               -->
-        <module>child-module-example</module>
-        <module>child-module-dependency</module>
     </modules>
 	<packaging>pom</packaging>
 
