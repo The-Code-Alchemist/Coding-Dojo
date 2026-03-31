@@ -10,7 +10,11 @@ import java.util.List;
 @RestController
 public class TutorialController {
 
-    private final TutorialService tutorialService = new TutorialService();
+    private final TutorialService tutorialService;
+
+    public TutorialController(TutorialService tutorialService) {
+        this.tutorialService = tutorialService;
+    }
 
     @GetMapping("/tutorials")
     public List<Tutorial> getTutorials() {

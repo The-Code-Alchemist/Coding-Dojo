@@ -1,9 +1,11 @@
 package com.codealchemists.dojo.service;
 
 import com.codealchemists.dojo.model.Tutorial;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class TutorialService {
 
     public List<Tutorial> getTutorials() {
