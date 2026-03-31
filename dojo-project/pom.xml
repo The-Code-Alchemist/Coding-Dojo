@@ -10,7 +10,7 @@
     <parent>
         <groupId>com.codealchemists</groupId>
         <artifactId>coding-dojo</artifactId>
-        <version>1.0.3-SNAPSHOT</version>
+        <version>1.0.4-SNAPSHOT</version>
     </parent>
 
     <properties>
@@ -23,6 +23,13 @@
         <dependency>
             <groupId>com.codealchemists</groupId>
             <artifactId>dojo-domain</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <!-- Coding Dojo Application -->
+        <dependency>
+            <groupId>com.codealchemists</groupId>
+            <artifactId>dojo-application</artifactId>
             <version>${project.version}</version>
         </dependency>
 

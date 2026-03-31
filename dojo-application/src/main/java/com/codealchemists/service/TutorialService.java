@@ -1,4 +1,4 @@
-package com.codealchemists.dojo.service;
+package com.codealchemists.service;
 
 import com.codealchemists.dojo.model.Tutorial;
 

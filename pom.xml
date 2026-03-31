@@ -5,10 +5,11 @@
 
 	<groupId>com.codealchemists</groupId>
 	<artifactId>coding-dojo</artifactId>
-	<version>1.0.3-SNAPSHOT</version>
+	<version>1.0.4-SNAPSHOT</version>
     <modules>
         <module>dojo-domain</module>
         <module>dojo-project</module>
+        <module>dojo-application</module>
         <module>backend-jakarta</module>
     </modules>
 	<packaging>pom</packaging>
