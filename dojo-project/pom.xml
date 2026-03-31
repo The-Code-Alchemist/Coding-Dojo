@@ -10,10 +10,9 @@
     <version>1.0.1-SNAPSHOT</version>
 
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.3.1</version>
-        <relativePath/>
+        <groupId>com.codealchemists</groupId>
+        <artifactId>coding-dojo</artifactId>
+        <version>1.0.2-SNAPSHOT</version>
     </parent>
 
     <properties>

@@ -5,19 +5,17 @@
 
 	<groupId>com.codealchemists</groupId>
 	<artifactId>coding-dojo</artifactId>
-	<version>1.0.1-SNAPSHOT</version>
+	<version>1.0.2-SNAPSHOT</version>
     <modules>
-        <!-- add modules of the Coding Dojo here
-        Transitive dependencies are managed from here
-
-        <module>Jakarta EE</module>
-        <module>Spring Boot</module>
-        <module>Quarkus</module>
-        <module>Micronaut</module>
-
-        -->
+        <module>dojo-project</module>
     </modules>
 	<packaging>pom</packaging>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.5.11</version>
+    </parent>
 
 	<properties>
 		<maven.compiler.source>21</maven.compiler.source>
@@ -105,11 +103,6 @@ revise            - Basically provides a way to access cutting-edge versions of 
             </dependency>
 
             <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-parent</artifactId>
-                <version>3.2.12</version>
-            </dependency>
-            <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-jdbc</artifactId>
                 <version>6.2.12</version>
@@ -118,7 +111,7 @@ revise            - Basically provides a way to access cutting-edge versions of 
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
-                <version>1.7.36</version>
+                <version>2.0.17</version>
             </dependency>
 
             <!-- Testing -->
