@@ -6,6 +6,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>backend-jakarta</artifactId>
+    <packaging>war</packaging>
 
     <parent>
         <groupId>com.codealchemists</groupId>
@@ -24,15 +25,7 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- Jakarta API -->
-        <dependency>
-            <groupId>jakarta.ws.rs</groupId>
-            <artifactId>jakarta.ws.rs-api</artifactId>
-            <version>3.1.0</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <!-- Share modules -->
+        <!-- Shared modules -->
         <dependency>
             <groupId>com.codealchemists</groupId>
             <artifactId>dojo-application</artifactId>
@@ -46,5 +39,16 @@
         </dependency>
 
     </dependencies>
+
+    <build>
+        <finalName>backend-jakarta</finalName>
+
+        <plugins>
+            <plugin>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.4.0</version>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
