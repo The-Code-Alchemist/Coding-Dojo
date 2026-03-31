@@ -5,31 +5,26 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.codealchemists</groupId>
     <artifactId>dojo-project</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
 
     <parent>
         <groupId>com.codealchemists</groupId>
         <artifactId>coding-dojo</artifactId>
-        <version>1.0.2-SNAPSHOT</version>
+        <version>1.0.3-SNAPSHOT</version>
     </parent>
 
     <properties>
         <java.version>21</java.version>
     </properties>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.apache.commons</groupId>
-                <artifactId>commons-lang3</artifactId>
-                <version>3.20.0</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-
     <dependencies>
+
+        <!-- Coding Dojo Domain -->
+        <dependency>
+            <groupId>com.codealchemists</groupId>
+            <artifactId>dojo-domain</artifactId>
+            <version>${project.version}</version>
+        </dependency>
 
         <!-- Logging -->
         <dependency>

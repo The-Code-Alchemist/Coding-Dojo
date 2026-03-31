@@ -5,8 +5,9 @@
 
 	<groupId>com.codealchemists</groupId>
 	<artifactId>coding-dojo</artifactId>
-	<version>1.0.2-SNAPSHOT</version>
+	<version>1.0.3-SNAPSHOT</version>
     <modules>
+        <module>dojo-domain</module>
         <module>dojo-project</module>
         <module>backend-jakarta</module>
     </modules>
