@@ -8,6 +8,7 @@
 	<version>1.0.2-SNAPSHOT</version>
     <modules>
         <module>dojo-project</module>
+        <module>backend-jakarta</module>
     </modules>
 	<packaging>pom</packaging>
 
