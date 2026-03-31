@@ -10,7 +10,8 @@
     <parent>
         <groupId>com.codealchemists</groupId>
         <artifactId>coding-dojo</artifactId>
-        <version>1.0.2-SNAPSHOT</version>
+        <version>1.0.5-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <dependencies>
@@ -21,6 +22,27 @@
             <artifactId>jakarta.jakartaee-api</artifactId>
             <version>10.0.0</version>
             <scope>provided</scope>
+        </dependency>
+
+        <!-- Jakarta API -->
+        <dependency>
+            <groupId>jakarta.ws.rs</groupId>
+            <artifactId>jakarta.ws.rs-api</artifactId>
+            <version>3.1.0</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- Share modules -->
+        <dependency>
+            <groupId>com.codealchemists</groupId>
+            <artifactId>dojo-application</artifactId>
+            <version>1.0.5-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.codealchemists</groupId>
+            <artifactId>dojo-domain</artifactId>
+            <version>1.0.5-SNAPSHOT</version>
         </dependency>
 
     </dependencies>
