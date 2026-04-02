@@ -1,83 +1,34 @@
 services:
 
-    # Spring Boot app
-    coding-dojo-app:
-        build:
-            context: .
-            dockerfile: Dockerfile
+    spring-app:
+        build: .
         container_name: coding-dojo-dev
         ports:
-            - "8085:8080"
-        environment:
-            - SPRING_PROFILES_ACTIVE=dev
-            - JAVA_OPTS=-Xms256m -Xmx512m
-        volumes:
-            - ./target:/app/target
-            - ./logs:/app/logs
-        networks:
-            - coding-dojo-network
+            - "8080:8080"   # Spring backend (primary app)
         depends_on:
             - postgres
-            - redis
-        restart: unless-stopped
 
-    # Jakarta EE (WildFly)
     wildfly:
         image: quay.io/wildfly/wildfly:latest
         container_name: coding-dojo-wildfly
         ports:
-            - "8082:8080"
-            - "9991:9990"
+            - "8081:8080"   # Jakarta backend
+            - "9990:9990"   # WildFly admin console (infra)
         volumes:
             - ./backend-jakarta/target/backend-jakarta.war:/opt/jboss/wildfly/standalone/deployments/backend-jakarta.war
-        networks:
-            - coding-dojo-network
-        restart: unless-stopped
 
-    # PostgreSQL
     postgres:
-        image: postgres:16-alpine
+        image: postgres:16
         container_name: coding-dojo-postgres
         environment:
-            POSTGRES_DB: coding_dojo
-            POSTGRES_USER: dojo_user
-            POSTGRES_PASSWORD: dojo_password
+            POSTGRES_DB: dojo
+            POSTGRES_USER: dojo
+            POSTGRES_PASSWORD: dojo
         ports:
-            - "5432:5432"
-        volumes:
-            - postgres-data:/var/lib/postgresql/data
-        networks:
-            - coding-dojo-network
-        restart: unless-stopped
+            - "5432:5432"   # DB (infra)
 
-    # Redis
-    redis:
-        image: redis:7-alpine
-        container_name: coding-dojo-redis
-        ports:
-            - "6379:6379"
-        volumes:
-            - redis-data:/data
-        networks:
-            - coding-dojo-network
-        restart: unless-stopped
-
-    # Adminer (DB UI)
     adminer:
-        image: adminer:latest
+        image: adminer
         container_name: coding-dojo-adminer
         ports:
-            - "8081:8080"
-        environment:
-            ADMINER_DEFAULT_SERVER: postgres
-        networks:
-            - coding-dojo-network
-        restart: unless-stopped
-
-networks:
-    coding-dojo-network:
-        driver: bridge
-
-volumes:
-    postgres-data:
-    redis-data:
+            - "9001:8080"   # DB UI (infra)
